@@ -26,6 +26,7 @@ export default class extends Component {
     }
 
     render() {
+
       const { productsList, categories } = this.state
       console.log(categories)
       //console.log(productsList)
