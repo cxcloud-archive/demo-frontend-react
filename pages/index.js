@@ -1,6 +1,6 @@
 import React from 'react';
 import Cover from './../components/Cover';
-import CurrentServices from '../components/CurrentServices';
+import Categories from '../components/Categories';
 import RecommendedServices from '../components/RecommendedServices';
 import FindPlan from '../components/FindPlan';
 import Util from '../common/Util';
@@ -17,7 +17,7 @@ export default class extends React.Component {
 
 
         const productId = _.get(query, 'id');
-        const product = await Util.fetchProduct(productId);
+        const commerceProducts = await Util.fetchCommerceProducts(productId);
 
         const recommendedProductsId = _.get(query, 'id');
         const recommendedProducts = await Util.fetchRecommendedProducts(recommendedProductsId);
@@ -26,17 +26,15 @@ export default class extends React.Component {
         const categoryId = _.get(query);
         const categories = await Util.fetchCommerceCategories(categoryId);
 
-        return {
-            user, product, recommendedProducts, categories
-        };
+        return { user, commerceProducts, recommendedProducts, categories };
     }
     render() {
-        const { product, user, recommendedProducts, categories } = this.props;
-
+        const { commerceProducts, user, recommendedProducts, categories } = this.props;
+      //console.log(commerceProducts.results[0].name.en)
         return (
             <Layout className="Homepage grid-container">
                 <Cover user={user}/>
-                <CurrentServices categories={categories} />
+                <Categories categories={categories} />
                 {/* <RecommendedServices /> */}
                 <FindPlan />
             </Layout>

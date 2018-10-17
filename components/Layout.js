@@ -15,10 +15,10 @@ export default ({children}) => (
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 color: #4a4a4a;
             }
-            .CurrentServices, .RecommendedServices, .FindPlan, .ServiceInformation, .Calendar {
+            .Categories, .RecommendedServices, .FindPlan, .ServiceInformation, .Calendar {
                 padding: 20px 40px 20px 40px;
             }
-            .CurrentServices, .RecommendedServices, .ServiceInformation {
+            .Categories, .RecommendedServices, .ServiceInformation {
                 max-width: 75em;
             }
             .recommServ-title, .currServ-title {
@@ -67,7 +67,7 @@ export default ({children}) => (
             }
             /* Media queries */
             @media only screen and (max-width : 400px) {
-                .CurrentServices, .RecommendedServices, .FindPlan {
+                .Categories, .RecommendedServices, .FindPlan {
                 padding: 0px 20px 0px 20px;
                 }
                 .title {

@@ -50,9 +50,20 @@ export default class Util {
     const json = await res.json();
     return json;
   }
-
   static async fetchCommerceCategories() {
     const res = await fetch(`https://dev.cxcloud.com/api/v1/categories`);
+    const json = await res.json();
+    return json;
+  }
+
+  static async fetchProductById(productId) {
+    const res = await fetch(`https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}&sys.id=${productId}`);
+    const json = await res.json();
+    return json;
+  }
+
+  static async fetchCommerceProducts(productId) {
+    const res = await fetch(`https://dev.cxcloud.com/api/v1/products/byCategory/bc80fc19-fa5b-4703-a455-e04af626a946`);
     const json = await res.json();
     return json;
   }

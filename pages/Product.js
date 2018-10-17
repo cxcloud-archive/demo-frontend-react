@@ -14,25 +14,6 @@ export default class extends Component {
         shown: false
     }
 
-
-  // componentDidMount() {
-  //     this.fetchData()
-
-  //   }
-  //   fetchData() {
-  //     this.setState({isLoading: true})
-  //     fetch(`https://dev.cxcloud.com/api/v1/categories`)
-  //     .then(response => response.json())
-  //     .then(parsedJSON => {
-  //           console.log('hey ' + parsedJSON[0].slug)
-  //     })}
-
-
-
-
-
-
-
     static async getInitialProps({ query, req }) {
         const productId = _.get(query, 'id');
         const product =await Util.fetchProductById(productId);

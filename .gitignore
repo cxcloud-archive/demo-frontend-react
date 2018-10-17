@@ -1,0 +1,9 @@
+node_modules/
+
+# IDE - VSCode
+.vscode/*
+.next
+
+# System Files
+.DS_Store
+Thumbs.db
