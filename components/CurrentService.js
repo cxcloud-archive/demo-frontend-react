@@ -30,7 +30,7 @@ export default class extends Component {
         <h2 className="currServ-title title">
           subcategories
         </h2>
-        <div className="currentServices-sub">
+        <div className="selected_category">
           {this.state.categories.map((item, i) => (
             <p key={i}>
               <a href={'/Subcategory?id='}>{item.name.en}</a>
@@ -57,7 +57,7 @@ export default class extends Component {
               margin-left: auto;
               margin-right: auto;
             }
-            .currentServices-sub {
+            .selected_category {
               display: grid;
               grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             }

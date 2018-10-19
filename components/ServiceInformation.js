@@ -3,7 +3,7 @@ import Categories from './Categories'
 var FontAwesome = require('react-fontawesome');
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCheckSquare, faCart, faStar, faCoffee } from '@fortawesome/fontawesome-free-solid'
+import { faCheckSquare, faCart, faFemale, faStar, faCoffee } from '@fortawesome/fontawesome-free-solid'
 
 export default ({
   id,
@@ -39,13 +39,14 @@ export default ({
                   <a href="">Write first review</a>
                 </p>
               </div>
+              
 
               <p>{description}</p>
               <p>Color: {color}</p>
               <p>Size: {size}</p>
               <p>€ {priceInEuro}</p>
               <div className="cart">
-              <button>Add to cart</button>
+                <button>Add to cart</button>
               </div>
             </div>
             <div>
@@ -79,7 +80,6 @@ export default ({
             }
             .container-text {
               max-width: 50em;
-              margin-top: 100px;
             }
             .mainContent {
               line-height: 30px;
