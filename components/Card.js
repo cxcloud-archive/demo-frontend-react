@@ -1,8 +1,9 @@
 import React from 'react'
 
-export default ({ name, image, description, price, currency }) => {
+export default ({ id, name, image, description, price, currency }) => {
   return(
   <div className="Card">
+  <a href={`/Product?id=${id}`}>
     <div>
       <div>
         <img src={image} width="80px" height="120px" alt="" />
@@ -13,6 +14,7 @@ export default ({ name, image, description, price, currency }) => {
         <p>{price} {currency}</p>
       </div>
     </div>
+    </a>
     <style jsx>
       {`
         .Card {

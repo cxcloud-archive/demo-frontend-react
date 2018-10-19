@@ -56,7 +56,7 @@ export default class Util {
   }
 
   static async fetchProductById(productId) {
-    const res = await fetch(`https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}&sys.id=${productId}`);
+    const res = await fetch(`https://dev.cxcloud.com/api/v1/products/${productId}`);
     const json = await res.json();
     return json;
   }

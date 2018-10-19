@@ -14,8 +14,6 @@ export default class extends Component {
     await Util.fetchCommerceCategories().then((result) => {
         this.setState({ categories: result });
     })
-
-
   }
   onClickCategory = (e, categoryId) => {
     e.preventDefault()
@@ -38,35 +36,36 @@ export default class extends Component {
           These are the services we are providing you at the moment:
         </h2>
         <div className="currentServices-sub">
-          {categories.map((category, i) => <p key={i}>
-              <a href={`/Product?id=${category.id}`}
-                 onClick={(e) => this.onClickCategory(e, category.id)}>{category.name.en}</a>
-            </p>)}
+          {categories.map((category, i) =>
+          <p key={i}>
+            <a href={`/Product?id=${category.id}`}
+                onClick={(e) => this.onClickCategory(e, category.id)}>{category.name.en}</a>
+          </p>)}
         </div>
 
-          <div className="currentServices-sub">
-            {productsList.map((item, i) => <p key={i}>
-              <a href={`/Product?id=${item.id}`}>
-                <Card
-                  name={item.name.en}
-                  image={item.masterVariant.images[0].url}
-                  description={item.slug.en}
-                  price={item.masterVariant.prices[0].value.centAmount}
-                  currency={item.masterVariant.prices[0].value.currencyCode} />
-              </a>
-            </p>)}
-          </div>
-            <style jsx>
-              {`
-                .Categories {
-                  margin-left: auto;
-                  margin-right: auto;
-                }
-                .currentServices-sub {
-                  display: grid;
-                  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-                }`}
-            </style>
-          </div>;
+        <div className="currentServices-sub">
+          {productsList.map((item, i) =>
+            <Card
+              key={i}
+              id={item.id}
+              name={item.name.en}
+              image={item.masterVariant.images[0].url}
+              description={item.slug.en}
+              price={item.masterVariant.prices[0].value.centAmount}
+              currency={item.masterVariant.prices[0].value.currencyCode} />
+          )}
+        </div>
+        <style jsx>
+          {`
+            .Categories {
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .currentServices-sub {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            }`}
+        </style>
+      </div>;
     }
 }

@@ -15,7 +15,6 @@ export default class extends React.Component {
         const users = await Util.fetchUsers(productId);
         const user = users.items[0].fields
 
-
         const productId = _.get(query, 'id');
         const commerceProducts = await Util.fetchCommerceProducts(productId);
 

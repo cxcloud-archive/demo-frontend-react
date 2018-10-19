@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
+import Categories from './Categories'
+var FontAwesome = require('react-fontawesome');
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCheckSquare, faCart, faStar, faCoffee } from '@fortawesome/fontawesome-free-solid'
 
 export default ({
-    productId,
-    productName,
-    productCode,
-    productHighlight,
-    price,
-    longDescription,
-    productShortDescription,
-    availability,
-    image
+  id,
+  name,
+  image,
+  description,
+  priceInEuro,
+  currency,
+  sku,
+  color,
+  size
 }) => {
+  console.log(name)
+
     return <div className="ServiceInformation grid-container">
         <div className="container">
           <div className="solarHouse-container">
@@ -18,27 +25,34 @@ export default ({
           </div>
           <div className="container-text">
             <div>
-              <h2>
-                {productName} {productCode}
-              </h2>
-              <p>EAN Code</p>
-              <div>
-                <p>Stars Rating icon</p>
-                <a><p>Write first review</p></a>
+              <div className="title">
+                <h2>{name}</h2>
+                <p>{sku}</p>
               </div>
-              <p>{productShortDescription}</p>
-              <p>
-                <span>$ {price} / mo</span>
-                maintenance fee
-              </p>
-              <h3>{productHighlight}</h3>
-              <p className="mainContent">{longDescription}</p>
+              <div className="rating">
+                <FontAwesomeIcon icon={faStar} />
+                <FontAwesomeIcon icon={faStar} />
+                <FontAwesomeIcon icon={faStar} />
+                <FontAwesomeIcon icon={faStar} />
+                <FontAwesomeIcon icon={faStar} />
+                <p>
+                  <a href="">Write first review</a>
+                </p>
+              </div>
+
+              <p>{description}</p>
+              <p>Color: {color}</p>
+              <p>Size: {size}</p>
+              <p>€ {priceInEuro}</p>
+              <div className="cart">
+              <button>Add to cart</button>
+              </div>
             </div>
             <div>
               <h2 className="bold">How to get started?</h2>
               <p>Just book a time for our engineer to visit your home.</p>
               <p>The next free slots in the area of Espoo are:</p>
-              <ul className="availability-list">
+              {/* <ul className="availability-list">
                 {availability ? availability.map((item, i) => <li key={i}>
                       <div className="time-details">
                         <img id="clockIcon" src="https://png.icons8.com/metro/1600/clock.png" alt="clock" />
@@ -48,7 +62,7 @@ export default ({
                         <a href="">Reserve</a>
                       </p>
                     </li>) : <div>No time available</div>}
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
@@ -65,6 +79,7 @@ export default ({
             }
             .container-text {
               max-width: 50em;
+              margin-top: 100px;
             }
             .mainContent {
               line-height: 30px;
@@ -74,7 +89,6 @@ export default ({
               width: 70%;
             }
             .solarHouse-container {
-              max-width: 16em;
               text-align: center;
             }
             .availability-list {
