@@ -2,31 +2,23 @@ import React, { Component } from 'react'
 import Link from 'next/link'
 import Util from '../common/Util'
 
-
 export default class extends Component {
   state = {
     categories: [],
     productsList: []
   };
   async componentDidMount() {
-    await Util.fetchCommerceCategories().then(result => {
+    await Util.fetchCategories().then(result => {
       this.setState({ categories: result });
     });
 
-    await Util.fetchCommerceProducts().then(result => {
+    await Util.fetchProducts().then(result => {
       this.setState({ productsList: result });
     });
-
-    // onClickProductList = (e) => {
-    //   e.preventDefault();
-    //   this.setState({ productsList });
-    // }
   }
   render() {
-    console.log(this.state.productsList);
-
     return (
-      <div className="Categories">
+      <div className="CategoriesList">
         <h2 className="currServ-title title">
           subcategories
         </h2>
@@ -36,24 +28,10 @@ export default class extends Component {
               <a href={'/Subcategory?id='}>{item.name.en}</a>
             </p>
           ))}
-
-          {/* {this.state.categories.map((item, i) => (
-                    <CurrentService
-                        productId={item.sys.id}
-                        key={i}
-                        productName={item.fields.productName}
-                        productCode={item.fields.productCode}
-                        productHighlight={item.fields.productHighlight}
-                        price={item.fields.price}
-                        longDescription={item.fields.longDescription}
-                        productShortDescription={item.fields.productShortDescription}
-                        image={item.fields.imageLink}>
-                    </CurrentService>
-                    ))} */}
         </div>
         <style jsx>
           {`
-            .Categories {
+            .CategoriesList {
               margin-left: auto;
               margin-right: auto;
             }
@@ -92,7 +70,7 @@ export default class extends Component {
 
 // }) => {
 //     return (
-//         <div className="CurrentService">
+//         <div className="Category">
 //             <div className="container">
 //                 <div>
 //                   <div>
@@ -104,7 +82,7 @@ export default class extends Component {
 //             </div>
 //             <style jsx>
 //                 {`
-//                 .CurrentService {
+//                 .Category {
 //                     margin: 0 auto;
 //                     display: flex;
 //                     flex-direction: column;
@@ -112,7 +90,7 @@ export default class extends Component {
 //                     background: #f7f7f7;
 //                     padding: 10px;
 //                 }
-//                 .CurrentService:nth-child(odd) {
+//                 .Category:nth-child(odd) {
 //                     background-color: #f4f2f2;
 //                 }
 //                 .container {
@@ -129,7 +107,7 @@ export default class extends Component {
 //                     margin-left: 25px;
 //                 }
 //                 @media only screen and (max-width: 880px) {
-//                     .CurrentService {
+//                     .Category {
 //                         max-width: 28em;
 //                         max-height: 28em;
 //                     }

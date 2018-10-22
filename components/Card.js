@@ -2,6 +2,7 @@ import React from 'react'
 
 export default ({ id, name, image, description, price, currency }) => {
   return <div className="Card">
+  {/* use link component */}
       <a href={`/Product?id=${id}`}>
         <div>
           <div>
