@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import CategoriesList from './CategoriesList'
-import styled from 'styled-components';
+import styled from 'styled-components'
 var FontAwesome = require('react-fontawesome')
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -59,6 +59,7 @@ const ProductContainer = styled.div`
   margin: 0 auto;
   display: inline-flex;
   align-items: center;
+  flex-direction: row;
   @media only screen and (max-width: 580px) {
     display: flex;
     flex-direction: column;

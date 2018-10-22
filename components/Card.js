@@ -1,7 +1,9 @@
 import React from 'react'
+import style from 'styled-components'
 
 export default ({ id, name, image, description, price, currency }) => {
-  return <div className="Card">
+  return(
+  <Wrapper>
   {/* use link component */}
       <a href={`/Product?id=${id}`}>
         <div>
@@ -17,20 +19,18 @@ export default ({ id, name, image, description, price, currency }) => {
           </div>
         </div>
       </a>
-      <style jsx>
-        {`
-          .Card {
-            display: flex;
-            justify-content: center;
-            margin: 10px;
-            padding: 10px;
-          }
-          .Card:nth-child(odd) {
-            background-color: #f7f7f7;
-          }
-          .Card:nth-child(even) {
-            background-color: #f4f2f2;
-          }`}
-      </style>
-    </div>;
+    </Wrapper>
+  );
 };
+const Wrapper = style.div`
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  :nth-child(odd) {
+    background-color: #f7f7f7;
+  }
+  :nth-child(even) {
+    background-color: #f4f2f2;
+  }
+`;

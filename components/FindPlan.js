@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default () => {
-    return <div className="FindPlan backgroundLightGrey">
+    return (<div className="FindPlan backgroundLightGrey">
         <div className="subcontainer">
           <div className="findPlan-text">
             <h2 className="normal bold">
@@ -54,5 +54,6 @@ export default () => {
                 margin-left: 20px;
               }}`}
         </style>
-      </div>;
+      </div>
+    );
 }

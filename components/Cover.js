@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-export default ({user}) => {
+export default () => {
   return (
     <Wrapper>
       <div></div>

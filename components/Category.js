@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
 import Util from '../common/Util'
+import styled from 'styled-components'
 
 export default class extends Component {
   state = {
@@ -18,7 +19,7 @@ export default class extends Component {
   }
   render() {
     return (
-      <div className="CategoriesList">
+      <Wrapper>
         <h2 className="currServ-title title">
           subcategories
         </h2>
@@ -29,96 +30,15 @@ export default class extends Component {
             </p>
           ))}
         </div>
-        <style jsx>
-          {`
-            .CategoriesList {
-              margin-left: auto;
-              margin-right: auto;
-            }
-            .selected_category {
-              display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            }
-          `}
-        </style>
-      </div>
+      </Wrapper>
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// export default ({
-
-// }) => {
-//     return (
-//         <div className="Category">
-//             <div className="container">
-//                 <div>
-//                   <div>
-//                       <p>
-//                           <a href={'/Product?id=' + productId}>Manage subscription</a>
-//                       </p>
-//                   </div>
-//                 </div>
-//             </div>
-//             <style jsx>
-//                 {`
-//                 .Category {
-//                     margin: 0 auto;
-//                     display: flex;
-//                     flex-direction: column;
-//                     justify-content: space-between;
-//                     background: #f7f7f7;
-//                     padding: 10px;
-//                 }
-//                 .Category:nth-child(odd) {
-//                     background-color: #f4f2f2;
-//                 }
-//                 .container {
-//                     align-items: flex-end;
-//                     display: inline-flex;
-//                 }
-//                 .home-icon {
-//                     width: 100px;
-//                     height: 100px;
-//                     margin-bottom: 16px;
-//                     margin-left: 30px;
-//                 }
-//                 .details {
-//                     margin-left: 25px;
-//                 }
-//                 @media only screen and (max-width: 880px) {
-//                     .Category {
-//                         max-width: 28em;
-//                         max-height: 28em;
-//                     }
-//                 }
-//                 @media only screen and (max-width: 480px) {
-//                     .container {
-//                         display: block;
-//                     }
-//                 }
-//             `}
-//             </style>
-//         </div>
-//     );
-// }
+const Wrapper = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  }
+`;
