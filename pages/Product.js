@@ -19,15 +19,15 @@ export default class extends Component {
   render() {
     const { product } = this.props;
     const priceInEuro = (product.masterVariant.prices[0].value.centAmount / 100).toFixed(2);
-
+console.log(product.name.en)
     return(
       <Layout>
           <CoverAllPages className="CoverAllPages" />
           <ProductDetails
             id={product.id}
             name={product.name.en}
-            color={product.masterVariant.attributes[9].value.label.en}
-            size={product.masterVariant.attributes[8].value}
+            // color={product.masterVariant.attributes[9].value.label.en}
+            // size={product.masterVariant.attributes[8].value}
             image={product.masterVariant.images[0].url}
             description={product.slug.en}
             sku={product.masterVariant.sku}

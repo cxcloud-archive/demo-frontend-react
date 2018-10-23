@@ -4,6 +4,12 @@ import styled from 'styled-components'
 
 export default class extends Component {
   render() {
+
+const Wrapper = styled.div`
+  h1 {
+    text-align: center;
+  }
+`;
     return (
       <Layout>
         <Wrapper>
@@ -13,8 +19,3 @@ export default class extends Component {
     );
   }
 }
-const Wrapper = styled.div`
-  h1 {
-    text-align: center;
-  }
-`;

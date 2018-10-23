@@ -18,11 +18,16 @@ export default class extends Component {
     });
   }
   render() {
+
+
+const Wrapper = styled.div`
+  div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  }
+`;
     return (
       <Wrapper>
-        <h2 className="currServ-title title">
-          subcategories
-        </h2>
         <div className="selected_category">
           {this.state.categories.map((item, i) => (
             <p key={i}>
@@ -34,11 +39,3 @@ export default class extends Component {
     );
   }
 }
-const Wrapper = styled.div`
-  margin-left: auto;
-  margin-right: auto;
-  div {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  }
-`;

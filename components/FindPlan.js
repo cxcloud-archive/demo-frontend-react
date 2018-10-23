@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default () => {
-    return (<div className="FindPlan backgroundLightGrey">
+    return <div className="FindPlan backgroundLightGrey">
         <div className="subcontainer">
           <div className="findPlan-text">
             <h2 className="normal bold">
@@ -27,6 +27,10 @@ export default () => {
               display: inline-flex;
               align-items: center;
               background-color: #cecece;
+              padding: 20px 40px 20px 40px;
+              // @media only screen and (max-width: 400px) {
+              //   padding: 0px 20px 0px 20px;
+              // }
             }
             .FindPlan h2 {
               color: #ff3764;
@@ -54,6 +58,5 @@ export default () => {
                 margin-left: 20px;
               }}`}
         </style>
-      </div>
-    );
+      </div>;
 }

@@ -21,7 +21,7 @@ export default class extends React.Component {
     const { commerceProducts, categories } = this.props;
     return (
       <Layout className="Homepage">
-        <Cover />
+        <Cover className="cover" />
         <CategoriesList categories={categories} />
         <FindPlan />
       </Layout>

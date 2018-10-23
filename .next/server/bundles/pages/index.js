@@ -227,11 +227,9 @@ function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__("styled-components");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_styled_components__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_link__ = __webpack_require__("next/link");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_next_link__);
 var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/Card.js";
-
-var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: center;\n  margin: 10px;\n  padding: 10px;\n  :nth-child(odd) {\n    background-color: #f7f7f7;\n  }\n  :nth-child(even) {\n    background-color: #f4f2f2;\n  }\n"]);
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
 
@@ -242,59 +240,67 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
       description = _ref.description,
       price = _ref.price,
       currency = _ref.currency;
+  var Wrapper = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.div.withConfig({
+    displayName: "Card__Wrapper",
+    componentId: "f01nyv-0"
+  })(["display:flex;justify-content:center;margin:10px;padding:10px;a{text-decoration:none;color:#000000;font-weight:500;}a:hover{color:#3a4048;}a:visited{color:#000000;}:nth-child(odd){background-color:#f7f7f7;}:nth-child(even){background-color:#f4f2f2;}"]);
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Wrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 30
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_link___default.a, {
     href: "/Product?id=".concat(id),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 31
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 33
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 34
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: image,
-    width: "80px",
-    height: "120px",
+    width: "80",
+    height: "120",
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 35
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 37
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 38
     }
   }, name), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 39
     }
   }, description), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 40
     }
-  }, price, " ", currency)))));
+  }, price, " ", currency))))));
 });
-var Wrapper = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.div(_templateObject);
 
 /***/ }),
 
@@ -305,16 +311,15 @@ var Wrapper = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.div(_tem
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _default; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__ = __webpack_require__("@babel/runtime/regenerator");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_jsx_style__ = __webpack_require__("styled-jsx/style");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_jsx_style___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_styled_jsx_style__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__("react");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Category__ = __webpack_require__("./components/Category.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_Util__ = __webpack_require__("./common/Util.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Card__ = __webpack_require__("./components/Card.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Category__ = __webpack_require__("./components/Category.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_Util__ = __webpack_require__("./common/Util.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Card__ = __webpack_require__("./components/Card.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_styled_components__ = __webpack_require__("styled-components");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_styled_components__);
 
 var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/CategoriesList.js";
-
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -331,6 +336,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 
 
 
@@ -369,7 +375,7 @@ function (_Component) {
       writable: true,
       value: function value(e, categoryId) {
         e.preventDefault();
-        __WEBPACK_IMPORTED_MODULE_4__common_Util__["a" /* default */].fetchProducts(categoryId).then(function (list) {
+        __WEBPACK_IMPORTED_MODULE_3__common_Util__["a" /* default */].fetchProducts(categoryId).then(function (list) {
           _this.setState({
             productsList: list.results
           });
@@ -402,7 +408,7 @@ function (_Component) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return __WEBPACK_IMPORTED_MODULE_4__common_Util__["a" /* default */].fetchCategories().then(function (result) {
+                return __WEBPACK_IMPORTED_MODULE_3__common_Util__["a" /* default */].fetchCategories().then(function (result) {
                   _this2.setState({
                     categories: result
                   });
@@ -428,51 +434,62 @@ function (_Component) {
       var _state = this.state,
           categories = _state.categories,
           productsList = _state.productsList;
-      return __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("div", {
+      var Wrapper = __WEBPACK_IMPORTED_MODULE_5_styled_components___default.a.div.withConfig({
+        displayName: "CategoriesList__Wrapper",
+        componentId: "o6txje-0"
+      })(["margin:30px auto 30px auto;padding:20px 40px 20px 40px;max-width:75em;@media only screen and (max-width:400px){padding:0px 20px 0px 20px;}}"]);
+      var ListOfCategories = __WEBPACK_IMPORTED_MODULE_5_styled_components___default.a.div.withConfig({
+        displayName: "CategoriesList__ListOfCategories",
+        componentId: "o6txje-1"
+      })(["display:inline-flex;justify-content:space-between;"]);
+      var CategoryName = __WEBPACK_IMPORTED_MODULE_5_styled_components___default.a.div.withConfig({
+        displayName: "CategoriesList__CategoryName",
+        componentId: "o6txje-2"
+      })(["text-align:center;margin:0px 20px 0px 20px;padding:35px 40px 35px 40px;a{text-decoration:none;text-transform:uppercase;color:#000000;}a:hover{color:#3a4048;}a:visited{color:#000000;}&::selection{color:red;background:yellow;}&:nth-child(odd){background-color:#f7f7f7;}&:nth-child(even){background-color:#f4f2f2;}"]);
+      var SelectedCategory = __WEBPACK_IMPORTED_MODULE_5_styled_components___default.a.div.withConfig({
+        displayName: "CategoriesList__SelectedCategory",
+        componentId: "o6txje-3"
+      })(["display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));margin-top:10em;"]);
+      return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Wrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
-        },
-        className: "jsx-4252894610" + " " + "CategoriesList"
-      }, __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("div", {
+          lineNumber: 78
+        }
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(ListOfCategories, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
-        },
-        className: "jsx-4252894610" + " " + "list_of_categories"
+          lineNumber: 79
+        }
       }, categories.map(function (category, i) {
-        return __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("div", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 34
-          },
-          className: "jsx-4252894610" + " " + "category"
-        }, __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("h2", {
+        return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(CategoryName, {
           key: i,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 35
-          },
-          className: "jsx-4252894610"
-        }, __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("a", {
+            lineNumber: 80
+          }
+        }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h2", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 81
+          }
+        }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("a", {
           href: "/Product?id=".concat(category.id),
           onClick: function onClick(e) {
             return _this3.onClickCategory(e, category.id);
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 36
-          },
-          className: "jsx-4252894610"
+            lineNumber: 82
+          }
         }, category.name.en)));
-      })), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("div", {
+      })), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(SelectedCategory, {
+        className: "selected_category",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
-        },
-        className: "jsx-4252894610" + " " + "selected_category"
+          lineNumber: 88
+        }
       }, productsList.map(function (item, i) {
-        return __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__components_Card__["a" /* default */], {
+        return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Card__["a" /* default */], {
           key: i,
           id: item.id,
           name: item.name.en,
@@ -482,18 +499,15 @@ function (_Component) {
           currency: item.masterVariant.prices[0].value.currencyCode,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 44
+            lineNumber: 90
           }
         });
-      })), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_styled_jsx_style___default.a, {
-        styleId: "4252894610",
-        css: ".CategoriesList.jsx-4252894610{margin:30px auto 30px auto;}.list_of_categories.jsx-4252894610{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}.category.jsx-4252894610{text-align:center;padding:35px 40px 35px 40px;}.category.jsx-4252894610 a.jsx-4252894610{-webkit-text-decoration:none;text-decoration:none;text-transform:uppercase;}.category.jsx-4252894610::selection{color:red;background:yellow;}.category.jsx-4252894610:nth-child(odd){background-color:#f7f7f7;}.category.jsx-4252894610:nth-child(even){background-color:#f4f2f2;}.selected_category.jsx-4252894610{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));margin-top:10em;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvQ2F0ZWdvcmllc0xpc3QuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBdURTLEFBR3dDLEFBR2QsQUFJSyxBQUlHLEFBSVgsQUFJZSxBQUdBLEFBR1osVUFUSyxHQVV5QyxLQWxCL0IsT0FZOUIsQUFHQSxFQXRCQSxDQWdCQSxrQkFSQSxJQUcyQixvQkFlVCxJQXZCYyxDQVNoQyxXQWVBLHVHQXZCQSIsImZpbGUiOiJjb21wb25lbnRzL0NhdGVnb3JpZXNMaXN0LmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9kYW1hcmxpbi9jeC1jbG91ZC1lc2hvcCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBDb21wb25lbnQgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgQ2F0ZWdvcnkgZnJvbSAnLi9DYXRlZ29yeSc7XG5pbXBvcnQgVXRpbCBmcm9tICcuLi9jb21tb24vVXRpbCc7XG5pbXBvcnQgQ2FyZCBmcm9tICcuLi9jb21wb25lbnRzL0NhcmQnXG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIGV4dGVuZHMgQ29tcG9uZW50IHtcbiAgc3RhdGUgPSB7XG4gICAgY2F0ZWdvcmllczogW10sXG4gICAgcHJvZHVjdHNMaXN0OiBbXSxcbiAgICBzZWxlY3RlZENhdGVnb3J5OiBudWxsLFxuICAgIHNob3c6IHRydWVcbiAgfVxuICBhc3luYyBjb21wb25lbnREaWRNb3VudCgpIHtcbiAgICBhd2FpdCBVdGlsLmZldGNoQ2F0ZWdvcmllcygpLnRoZW4oKHJlc3VsdCkgPT4ge1xuICAgICAgICB0aGlzLnNldFN0YXRlKHsgY2F0ZWdvcmllczogcmVzdWx0IH0pO1xuICAgIH0pXG4gIH1cbiAgb25DbGlja0NhdGVnb3J5ID0gKGUsIGNhdGVnb3J5SWQpID0+IHtcbiAgICBlLnByZXZlbnREZWZhdWx0KClcbiAgICBVdGlsLmZldGNoUHJvZHVjdHMoY2F0ZWdvcnlJZCkudGhlbihsaXN0ID0+IHtcbiAgICAgIHRoaXMuc2V0U3RhdGUoeyBwcm9kdWN0c0xpc3Q6IGxpc3QucmVzdWx0cyB9KTtcbiAgICB9KTtcbiAgfVxuICBzaG93UHJvZHVjdHNMaXN0ID0gKGUpID0+IHtcbiAgICBlLnByZXZlbnREZWZhdWx0KClcbiAgICB0aGlzLnNldFN0YXRlKHsgc2hvdzogZmFsc2V9KVxuICB9XG5cbiAgcmVuZGVyKCkge1xuICAgIGNvbnN0IHsgY2F0ZWdvcmllcywgcHJvZHVjdHNMaXN0IH0gPSB0aGlzLnN0YXRlO1xuXG4gICAgcmV0dXJuIDxkaXYgY2xhc3NOYW1lPVwiQ2F0ZWdvcmllc0xpc3RcIj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwibGlzdF9vZl9jYXRlZ29yaWVzXCI+XG4gICAgICAgIHtjYXRlZ29yaWVzLm1hcCgoY2F0ZWdvcnksIGkpID0+IDxkaXYgY2xhc3NOYW1lPVwiY2F0ZWdvcnlcIj5cbiAgICAgICAgICAgIDxoMiBrZXk9e2l9PlxuICAgICAgICAgICAgICA8YSBocmVmPXtgL1Byb2R1Y3Q/aWQ9JHtjYXRlZ29yeS5pZH1gfSBvbkNsaWNrPXtlID0+IHRoaXMub25DbGlja0NhdGVnb3J5KGUsIGNhdGVnb3J5LmlkKX0+XG4gICAgICAgICAgICAgICAge2NhdGVnb3J5Lm5hbWUuZW59XG4gICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgIDwvaDI+XG4gICAgICAgICAgPC9kaXY+KX1cbiAgICAgIDwvZGl2PlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJzZWxlY3RlZF9jYXRlZ29yeVwiPlxuICAgICAgICB7cHJvZHVjdHNMaXN0Lm1hcCgoaXRlbSwgaSkgPT4gKFxuICAgICAgICAgIDxDYXJkXG4gICAgICAgICAgICBrZXk9e2l9XG4gICAgICAgICAgICBpZD17aXRlbS5pZH1cbiAgICAgICAgICAgIG5hbWU9e2l0ZW0ubmFtZS5lbn1cbiAgICAgICAgICAgIGltYWdlPXtpdGVtLm1hc3RlclZhcmlhbnQuaW1hZ2VzWzBdLnVybH1cbiAgICAgICAgICAgIGRlc2NyaXB0aW9uPXtpdGVtLnNsdWcuZW59XG4gICAgICAgICAgICBwcmljZT17aXRlbS5tYXN0ZXJWYXJpYW50LnByaWNlc1swXS52YWx1ZS5jZW50QW1vdW50fVxuICAgICAgICAgICAgY3VycmVuY3k9e2l0ZW0ubWFzdGVyVmFyaWFudC5wcmljZXNbMF0udmFsdWUuY3VycmVuY3lDb2RlfVxuICAgICAgICAgIC8+XG4gICAgICAgICkpfVxuICAgICAgPC9kaXY+XG4gICAgICA8c3R5bGUganN4PlxuICAgICAgICB7YFxuICAgICAgICAgIC5DYXRlZ29yaWVzTGlzdCB7XG4gICAgICAgICAgICBtYXJnaW46IDMwcHggYXV0byAzMHB4IGF1dG87XG4gICAgICAgICAgfVxuICAgICAgICAgIC5saXN0X29mX2NhdGVnb3JpZXMge1xuICAgICAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgICAgICAgICB9XG4gICAgICAgICAgLmNhdGVnb3J5IHtcbiAgICAgICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgICAgICAgIHBhZGRpbmc6IDM1cHggNDBweCAzNXB4IDQwcHg7XG4gICAgICAgICAgfVxuICAgICAgICAgIC5jYXRlZ29yeSBhIHtcbiAgICAgICAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICAgICAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gICAgICAgICAgfVxuICAgICAgICAgIC5jYXRlZ29yeSA6OnNlbGVjdGlvbiB7XG4gICAgICAgICAgICBjb2xvcjogcmVkO1xuICAgICAgICAgICAgYmFja2dyb3VuZDogeWVsbG93O1xuICAgICAgICAgIH1cbiAgICAgICAgICAuY2F0ZWdvcnk6bnRoLWNoaWxkKG9kZCkge1xuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2Y3ZjdmNztcbiAgICAgICAgICB9XG4gICAgICAgICAgLmNhdGVnb3J5Om50aC1jaGlsZChldmVuKSB7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjRmMmYyO1xuICAgICAgICAgIH1cbiAgICAgICAgICAuc2VsZWN0ZWRfY2F0ZWdvcnkge1xuICAgICAgICAgICAgZGlzcGxheTogZ3JpZDtcbiAgICAgICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KGF1dG8tZml0LCBtaW5tYXgoMzQwcHgsIDFmcikpO1xuICAgICAgICAgICAgbWFyZ2luLXRvcDogMTBlbTtcbiAgICAgICAgICB9YH1cbiAgICAgIDwvc3R5bGU+XG4gICAgPC9kaXY+O1xuICB9XG59XG4iXX0= */\n/*@ sourceURL=components/CategoriesList.js */"
-      }));
+      })));
     }
   }]);
 
   return _default;
-}(__WEBPACK_IMPORTED_MODULE_2_react__["Component"]);
+}(__WEBPACK_IMPORTED_MODULE_1_react__["Component"]);
 
 
 
@@ -515,10 +529,6 @@ function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_styled_components__);
 
 var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/Category.js";
-
-var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  margin-left: auto;\n  margin-right: auto;\n  div {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));\n  }\n"]);
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -610,35 +620,33 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var Wrapper = __WEBPACK_IMPORTED_MODULE_4_styled_components___default.a.div.withConfig({
+        displayName: "Category__Wrapper",
+        componentId: "sc-1asykl6-0"
+      })(["div{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}"]);
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Wrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 30
         }
-      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h2", {
-        className: "currServ-title title",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        }
-      }, "subcategories"), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
         className: "selected_category",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 31
         }
       }, this.state.categories.map(function (item, i) {
         return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("p", {
           key: i,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28
+            lineNumber: 33
           }
         }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("a", {
           href: '/Subcategory?id=',
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29
+            lineNumber: 34
           }
         }, item.name.en));
       })));
@@ -649,7 +657,6 @@ function (_Component) {
 }(__WEBPACK_IMPORTED_MODULE_1_react__["Component"]);
 
 
-var Wrapper = __WEBPACK_IMPORTED_MODULE_4_styled_components___default.a.div(_templateObject);
 
 /***/ }),
 
@@ -663,26 +670,24 @@ var Wrapper = __WEBPACK_IMPORTED_MODULE_4_styled_components___default.a.div(_tem
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_styled_components__);
 var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/Cover.js";
 
-var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  background-image: url('http://stowawaymag.com/files/2017/12/usa-1778524-1080x675.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 24em;\n  width: 100%;\n  display: inline-grid;\n  border-top: 10px solid #ff3764;\n  grid-area: cover;\n  div {\n    position: relative;\n    width: 100%;\n    height: 70%;\n    background-color: rgba(63, 71, 81, 0.9);\n  }\n"]);
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
 
 /* harmony default export */ __webpack_exports__["a"] = (function () {
+  var Wrapper = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.div.withConfig({
+    displayName: "Cover__Wrapper",
+    componentId: "sc-13p02vl-0"
+  })(["background-image:url('http://stowawaymag.com/files/2017/12/usa-1778524-1080x675.jpg');background-repeat:no-repeat;background-size:cover;height:24em;width:100%;display:inline-grid;border-top:10px solid #ff3764;grid-area:cover;div{position:relative;width:100%;height:70%;background-color:rgba(63,71,81,0.9);}"]);
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Wrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 23
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 24
     }
   }));
 });
-var Wrapper = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.div(_templateObject);
 
 /***/ }),
 
@@ -703,44 +708,44 @@ var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/FindPlan.js";
       fileName: _jsxFileName,
       lineNumber: 4
     },
-    className: "jsx-3744037177" + " " + "FindPlan backgroundLightGrey"
+    className: "jsx-394580264" + " " + "FindPlan backgroundLightGrey"
   }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
-    className: "jsx-3744037177" + " " + "subcontainer"
+    className: "jsx-394580264" + " " + "subcontainer"
   }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
-    className: "jsx-3744037177" + " " + "findPlan-text"
+    className: "jsx-394580264" + " " + "findPlan-text"
   }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h2", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
-    className: "jsx-3744037177" + " " + "normal bold"
+    className: "jsx-394580264" + " " + "normal bold"
   }, "Discover ", __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
-    className: "jsx-3744037177"
+    className: "jsx-394580264"
   }, "CX-CLOUD")), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
-    className: "jsx-3744037177"
+    className: "jsx-394580264"
   }, "Welcome to CX Cloud. This site will help you through the journey of setting up and operating a CX Cloud project. CX Cloud is an idea for creating micro-services based architecture on AWS Cloud. This project is created and maintained by Tieto's CEM unit in Finland.")), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
     },
-    className: "jsx-3744037177"
+    className: "jsx-394580264"
   }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("img", {
     src: "../static/images/next.png",
     alt: "blank",
@@ -748,10 +753,10 @@ var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/FindPlan.js";
       fileName: _jsxFileName,
       lineNumber: 19
     },
-    className: "jsx-3744037177" + " " + "arrow-icon"
+    className: "jsx-394580264" + " " + "arrow-icon"
   }))), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default.a, {
-    styleId: "3744037177",
-    css: ".FindPlan.jsx-3744037177{padding:30px;width:-webkit-fill-available;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#cecece;}.FindPlan.jsx-3744037177 h2.jsx-3744037177{color:#ff3764;}.FindPlan.jsx-3744037177 span.jsx-3744037177{font-style:italic;color:#ff3764;}.subcontainer.jsx-3744037177{max-width:75em;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:0 auto;}.findPlan-text.jsx-3744037177{grid-column:1;}.arrow-icon.jsx-3744037177{grid-column:2;width:auto;height:70%;margin-left:50px;}@media only screen and (max-width:480px){.arrow-icon.jsx-3744037177{margin-left:20px;}}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvRmluZFBsYW4uanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBc0JXLEFBRzRCLEFBT0MsQUFHSSxBQUlILEFBTUQsQUFHQSxBQU1LLGFBNUJVLENBTy9CLEFBYUEsQUFHYSxDQVRTLEVBZXBCLENBbkJjLE9BY0gsT0FiYixJQWNtQixNQXhCRyxXQXlCdEIsZ0VBWHFCLDJCQWJBLGtFQWNMLGNBQ2hCLGFBZDJCLHlCQUMzQiIsImZpbGUiOiJjb21wb25lbnRzL0ZpbmRQbGFuLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9kYW1hcmxpbi9jeC1jbG91ZC1lc2hvcCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5cbmV4cG9ydCBkZWZhdWx0ICgpID0+IHtcbiAgICByZXR1cm4gKDxkaXYgY2xhc3NOYW1lPVwiRmluZFBsYW4gYmFja2dyb3VuZExpZ2h0R3JleVwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInN1YmNvbnRhaW5lclwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmluZFBsYW4tdGV4dFwiPlxuICAgICAgICAgICAgPGgyIGNsYXNzTmFtZT1cIm5vcm1hbCBib2xkXCI+XG4gICAgICAgICAgICAgIERpc2NvdmVyIDxzcGFuPkNYLUNMT1VEPC9zcGFuPlxuICAgICAgICAgICAgPC9oMj5cbiAgICAgICAgICAgIDxwPlxuICAgICAgICAgICAgICBXZWxjb21lIHRvIENYIENsb3VkLiBUaGlzIHNpdGUgd2lsbCBoZWxwIHlvdSB0aHJvdWdoIHRoZVxuICAgICAgICAgICAgICBqb3VybmV5IG9mIHNldHRpbmcgdXAgYW5kIG9wZXJhdGluZyBhIENYIENsb3VkIHByb2plY3QuIENYXG4gICAgICAgICAgICAgIENsb3VkIGlzIGFuIGlkZWEgZm9yIGNyZWF0aW5nIG1pY3JvLXNlcnZpY2VzIGJhc2VkXG4gICAgICAgICAgICAgIGFyY2hpdGVjdHVyZSBvbiBBV1MgQ2xvdWQuIFRoaXMgcHJvamVjdCBpcyBjcmVhdGVkIGFuZFxuICAgICAgICAgICAgICBtYWludGFpbmVkIGJ5IFRpZXRvJ3MgQ0VNIHVuaXQgaW4gRmlubGFuZC5cbiAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8YSBocmVmPVwiI1wiPlxuICAgICAgICAgICAgPGltZyBjbGFzc05hbWU9XCJhcnJvdy1pY29uXCIgc3JjPVwiLi4vc3RhdGljL2ltYWdlcy9uZXh0LnBuZ1wiIGFsdD1cImJsYW5rXCIgLz5cbiAgICAgICAgICA8L2E+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8c3R5bGUganN4PlxuICAgICAgICAgIHtgXG4gICAgICAgICAgICAuRmluZFBsYW4ge1xuICAgICAgICAgICAgICBwYWRkaW5nOiAzMHB4O1xuICAgICAgICAgICAgICB3aWR0aDogLXdlYmtpdC1maWxsLWF2YWlsYWJsZTtcbiAgICAgICAgICAgICAgZGlzcGxheTogaW5saW5lLWZsZXg7XG4gICAgICAgICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNjZWNlY2U7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAuRmluZFBsYW4gaDIge1xuICAgICAgICAgICAgICBjb2xvcjogI2ZmMzc2NDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5GaW5kUGxhbiBzcGFuIHtcbiAgICAgICAgICAgICAgZm9udC1zdHlsZTogaXRhbGljO1xuICAgICAgICAgICAgICBjb2xvcjogI2ZmMzc2NDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5zdWJjb250YWluZXIge1xuICAgICAgICAgICAgICBtYXgtd2lkdGg6IDc1ZW07XG4gICAgICAgICAgICAgIGRpc3BsYXk6IGlubGluZS1mbGV4O1xuICAgICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICAgICAgICBtYXJnaW46IDAgYXV0bztcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5maW5kUGxhbi10ZXh0IHtcbiAgICAgICAgICAgICAgZ3JpZC1jb2x1bW46IDE7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAuYXJyb3ctaWNvbiB7XG4gICAgICAgICAgICAgIGdyaWQtY29sdW1uOiAyO1xuICAgICAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICAgICAgaGVpZ2h0OiA3MCU7XG4gICAgICAgICAgICAgIG1hcmdpbi1sZWZ0OiA1MHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0ODBweCkgey5hcnJvdy1pY29uIHtcbiAgICAgICAgICAgICAgICBtYXJnaW4tbGVmdDogMjBweDtcbiAgICAgICAgICAgICAgfX1gfVxuICAgICAgICA8L3N0eWxlPlxuICAgICAgPC9kaXY+XG4gICAgKTtcbn1cbiJdfQ== */\n/*@ sourceURL=components/FindPlan.js */"
+    styleId: "394580264",
+    css: ".FindPlan.jsx-394580264{padding:30px;width:-webkit-fill-available;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#cecece;padding:20px 40px 20px 40px;}.FindPlan.jsx-394580264 h2.jsx-394580264{color:#ff3764;}.FindPlan.jsx-394580264 span.jsx-394580264{font-style:italic;color:#ff3764;}.subcontainer.jsx-394580264{max-width:75em;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:0 auto;}.findPlan-text.jsx-394580264{grid-column:1;}.arrow-icon.jsx-394580264{grid-column:2;width:auto;height:70%;margin-left:50px;}@media only screen and (max-width:480px){.arrow-icon.jsx-394580264{margin-left:20px;}}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvRmluZFBsYW4uanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBc0JXLEFBRzRCLEFBV0MsQUFHSSxBQUlILEFBTUQsQUFHQSxBQU1LLGFBaENVLENBVy9CLEFBYUEsQUFHYSxDQVRTLEVBZXBCLENBbkJjLE9BY0gsT0FiYixJQWNtQixNQTVCRyxXQTZCdEIsZ0VBWHFCLDJCQWpCQSxrRUFrQkwsY0FDaEIsYUFsQjJCLHlCQUNHLDRCQUk5QiIsImZpbGUiOiJjb21wb25lbnRzL0ZpbmRQbGFuLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9kYW1hcmxpbi9jeC1jbG91ZC1lc2hvcCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5cbmV4cG9ydCBkZWZhdWx0ICgpID0+IHtcbiAgICByZXR1cm4gPGRpdiBjbGFzc05hbWU9XCJGaW5kUGxhbiBiYWNrZ3JvdW5kTGlnaHRHcmV5XCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3ViY29udGFpbmVyXCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmaW5kUGxhbi10ZXh0XCI+XG4gICAgICAgICAgICA8aDIgY2xhc3NOYW1lPVwibm9ybWFsIGJvbGRcIj5cbiAgICAgICAgICAgICAgRGlzY292ZXIgPHNwYW4+Q1gtQ0xPVUQ8L3NwYW4+XG4gICAgICAgICAgICA8L2gyPlxuICAgICAgICAgICAgPHA+XG4gICAgICAgICAgICAgIFdlbGNvbWUgdG8gQ1ggQ2xvdWQuIFRoaXMgc2l0ZSB3aWxsIGhlbHAgeW91IHRocm91Z2ggdGhlXG4gICAgICAgICAgICAgIGpvdXJuZXkgb2Ygc2V0dGluZyB1cCBhbmQgb3BlcmF0aW5nIGEgQ1ggQ2xvdWQgcHJvamVjdC4gQ1hcbiAgICAgICAgICAgICAgQ2xvdWQgaXMgYW4gaWRlYSBmb3IgY3JlYXRpbmcgbWljcm8tc2VydmljZXMgYmFzZWRcbiAgICAgICAgICAgICAgYXJjaGl0ZWN0dXJlIG9uIEFXUyBDbG91ZC4gVGhpcyBwcm9qZWN0IGlzIGNyZWF0ZWQgYW5kXG4gICAgICAgICAgICAgIG1haW50YWluZWQgYnkgVGlldG8ncyBDRU0gdW5pdCBpbiBGaW5sYW5kLlxuICAgICAgICAgICAgPC9wPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDxhIGhyZWY9XCIjXCI+XG4gICAgICAgICAgICA8aW1nIGNsYXNzTmFtZT1cImFycm93LWljb25cIiBzcmM9XCIuLi9zdGF0aWMvaW1hZ2VzL25leHQucG5nXCIgYWx0PVwiYmxhbmtcIiAvPlxuICAgICAgICAgIDwvYT5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIDxzdHlsZSBqc3g+XG4gICAgICAgICAge2BcbiAgICAgICAgICAgIC5GaW5kUGxhbiB7XG4gICAgICAgICAgICAgIHBhZGRpbmc6IDMwcHg7XG4gICAgICAgICAgICAgIHdpZHRoOiAtd2Via2l0LWZpbGwtYXZhaWxhYmxlO1xuICAgICAgICAgICAgICBkaXNwbGF5OiBpbmxpbmUtZmxleDtcbiAgICAgICAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2NlY2VjZTtcbiAgICAgICAgICAgICAgcGFkZGluZzogMjBweCA0MHB4IDIwcHggNDBweDtcbiAgICAgICAgICAgICAgLy8gQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0MDBweCkge1xuICAgICAgICAgICAgICAvLyAgIHBhZGRpbmc6IDBweCAyMHB4IDBweCAyMHB4O1xuICAgICAgICAgICAgICAvLyB9XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAuRmluZFBsYW4gaDIge1xuICAgICAgICAgICAgICBjb2xvcjogI2ZmMzc2NDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5GaW5kUGxhbiBzcGFuIHtcbiAgICAgICAgICAgICAgZm9udC1zdHlsZTogaXRhbGljO1xuICAgICAgICAgICAgICBjb2xvcjogI2ZmMzc2NDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5zdWJjb250YWluZXIge1xuICAgICAgICAgICAgICBtYXgtd2lkdGg6IDc1ZW07XG4gICAgICAgICAgICAgIGRpc3BsYXk6IGlubGluZS1mbGV4O1xuICAgICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICAgICAgICBtYXJnaW46IDAgYXV0bztcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5maW5kUGxhbi10ZXh0IHtcbiAgICAgICAgICAgICAgZ3JpZC1jb2x1bW46IDE7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAuYXJyb3ctaWNvbiB7XG4gICAgICAgICAgICAgIGdyaWQtY29sdW1uOiAyO1xuICAgICAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICAgICAgaGVpZ2h0OiA3MCU7XG4gICAgICAgICAgICAgIG1hcmdpbi1sZWZ0OiA1MHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0ODBweCkgey5hcnJvdy1pY29uIHtcbiAgICAgICAgICAgICAgICBtYXJnaW4tbGVmdDogMjBweDtcbiAgICAgICAgICAgICAgfX1gfVxuICAgICAgICA8L3N0eWxlPlxuICAgICAgPC9kaXY+O1xufVxuIl19 */\n/*@ sourceURL=components/FindPlan.js */"
   }));
 });
 
@@ -960,12 +965,6 @@ var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/Footer.js";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_styled_components__);
 var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/Header.js";
 
-var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  background-color: #fff;\n  display: flex;\n  flex-direction: row;\n  text-align: center;\n  align-items: center;\n  @media only screen and (max-width: 480px) {\n    display: flex;\n    flex-direction: column;\n  }\n"]),
-    _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  flex: auto 1 1;\n  justify-content: flex-start;\n  display: flex;\n  margin: auto 10px auto 10px;\n  img {\n    height: auto;\n    width: 170px;\n    height: auto;\n    margin-left: 30px;\n    @media only screen and (max-width: 480px) {\n      margin-left: 0;\n    }\n  }\n"]),
-    _templateObject3 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  p {\n    color: #939393;\n    font-weight: 200;\n  }\n  span {\n    color: #ff3764;\n  }\n"]);
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -999,49 +998,65 @@ function (_Component) {
   _createClass(_default, [{
     key: "render",
     value: function render() {
+      var Wrapper = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.div.withConfig({
+        displayName: "Header__Wrapper",
+        componentId: "an08yg-0"
+      })(["background-color:#fff;display:flex;flex-direction:row;text-align:center;align-items:center;@media only screen and (max-width:480px){display:flex;flex-direction:column;}"]);
+      var Logo = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.div.withConfig({
+        displayName: "Header__Logo",
+        componentId: "an08yg-1"
+      })(["flex:auto 1 1;justify-content:flex-start;display:flex;margin:auto 10px auto 10px;img{height:auto;margin-left:30px;@media only screen and (max-width:480px){margin-left:0;}}"]);
+      var Title = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.div.withConfig({
+        displayName: "Header__Title",
+        componentId: "an08yg-2"
+      })(["p{color:#939393;font-weight:200;}span{color:#ff3764;}"]);
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Wrapper, {
-        className: "Header",
+        className: this.props.global,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 42
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Logo, {
+        className: "logo",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 43
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 44
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 45
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+        width: "170px",
+        height: "auto",
         src: "/static/images/cxcloud_operator_logo.jpg",
         alt: "blank",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 46
         }
       })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Title, {
+        className: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 50
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 51
         }
       }, "The best ", __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 52
         }
       }, "imaginery"), " operator in the world.")));
     }
@@ -1051,9 +1066,6 @@ function (_Component) {
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 
-var Wrapper = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.div(_templateObject);
-var Logo = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.div(_templateObject2);
-var Title = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.div(_templateObject3);
 
 /***/ }),
 
@@ -1065,44 +1077,80 @@ var Title = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.div(_templ
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Header__ = __webpack_require__("./components/Header.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Footer__ = __webpack_require__("./components/Footer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_styled_components__ = __webpack_require__("styled-components");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_styled_components__);
 var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/Layout.js";
+
 
 
 
 /* harmony default export */ __webpack_exports__["a"] = (function (_ref) {
   var children = _ref.children;
+  var global = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.div.withConfig({
+    displayName: "Layout__global",
+    componentId: "sc-1c610dc-0"
+  })(["font-family:Verdana,Geneva,Tahoma,sans-serif;color:#4a4a4a;"]);
+  var button = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.button.withConfig({
+    displayName: "Layout__button",
+    componentId: "sc-1c610dc-1"
+  })(["background-color:#ff3764;padding:8px 30px 8px 30px;color:white;font-weight:400;font-size:18px;border-radius:8px;margin-top:20px;border-color:transparent;a{color:white;text-decoration:none;}"]);
+  var title = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.h1.withConfig({
+    displayName: "Layout__title",
+    componentId: "sc-1c610dc-2"
+  })(["font-size:24px;@media only screen and (max-width:400px){font-size:20px;color:#4a4a4a;}"]);
+  var big = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.h1.withConfig({
+    displayName: "Layout__big",
+    componentId: "sc-1c610dc-3"
+  })(["font-size:20px;"]);
+  var medium = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.p.withConfig({
+    displayName: "Layout__medium",
+    componentId: "sc-1c610dc-4"
+  })(["font-size:16px;"]);
+  var small = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.p.withConfig({
+    displayName: "Layout__small",
+    componentId: "sc-1c610dc-5"
+  })(["font-size:12px;"]);
+  var light = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.p.withConfig({
+    displayName: "Layout__light",
+    componentId: "sc-1c610dc-6"
+  })(["font-weight:200;"]);
+  var bold = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.p.withConfig({
+    displayName: "Layout__bold",
+    componentId: "sc-1c610dc-7"
+  })(["font-weight:600;"]);
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 50
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 51
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_Header__["a" /* default */], {
+    global: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 52
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("main", {
     className: "main",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 53
     }
   }, children), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Footer__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 54
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("style", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 56
     }
-  }, "\n          * {\n              font-family: Verdana, Geneva, Tahoma, sans-serif;\n              color: #4a4a4a;\n          }\n          .CategoriesList, .RecommendedServices, .FindPlan, .ProductDetails, .Calendar {\n              padding: 20px 40px 20px 40px;\n          }\n          .CategoriesList, .RecommendedServices, .ProductDetails {\n              max-width: 75em;\n          }\n          .recommServ-title, .currServ-title {\n              padding: 0 30px 0 30px;\n          }\n          .title {\n              font-size: 24px;\n          }\n          .big {\n              font-size: 20px;\n          }\n          .medium {\n              font-size: 16px;\n          }\n          .small {\n              font-size: 12px;\n          }\n          .light {\n              font-weight: 200;\n          }\n          .bold {\n              font-weight: 600;\n          }\n          .backgroundLightGrey {\n              background-color: lightgrey;\n          }\n          .backgroundGrey {\n              background-color: grey;\n          }\n          .backgroundDarkGrey {\n              background-color: darkgrey;\n          }\n          .readMore {\n            background-color: #ff3764;\n            padding: 8px 30px 8px 30px;\n            color: white;\n            font-weight: 400;\n            font-size: 18px;\n            border-radius: 8px;\n            margin-top: 20px;\n            border-color: transparent;\n          }\n          .readMore a {\n            color: white;\n            text-decoration: none;\n          }\n          /* Media queries */\n          @media only screen and (max-width : 400px) {\n            .CategoriesList, .RecommendedServices, .FindPlan {\n            padding: 0px 20px 0px 20px;\n            }\n            .title {\n            font-size: 20px;\n            color: #4a4a4a;\n            }\n          }\n        "));
+  }, "\n\n          .bold {\n              font-weight: 600;\n          }\n          .backgroundLightGrey {\n              background-color: lightgrey;\n          }\n          .backgroundGrey {\n              background-color: grey;\n          }\n          .backgroundDarkGrey {\n              background-color: darkgrey;\n          }\n          /* Media queries */\n          @media only screen and (max-width : 400px) {\n            .FindPlan {\n            padding: 0px 20px 0px 20px;\n            }\n            .title {\n\n            }\n          }\n        "));
 });
 
 /***/ }),
@@ -1177,6 +1225,7 @@ function (_React$Component) {
           lineNumber: 23
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Cover__["a" /* default */], {
+        className: "cover",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 24
