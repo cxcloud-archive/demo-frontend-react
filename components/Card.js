@@ -37,9 +37,9 @@ export default ({ id, name, image, description, price, currency, title }) => {
     font-weight: bold;
     font-size: 20px;
   `
+  const priceInEuro = (price / 100).toFixed(2);
 
-  return(
-    <Wrapper>
+  return <Wrapper>
       <Link href={`/Product?id=${id}`}>
         <a>
           <div>
@@ -50,12 +50,11 @@ export default ({ id, name, image, description, price, currency, title }) => {
               <Title>{name}</Title>
               <p>{description}</p>
               <p>
-                {price} {currency}
+                {priceInEuro} {currency}
               </p>
             </div>
           </div>
         </a>
       </Link>
-    </Wrapper>
-  );
+    </Wrapper>;
 };

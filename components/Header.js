@@ -35,9 +35,10 @@ const Title = styled.div`
     font-weight: 200;
   }
   span {
-    color: #ff3764;
+    color: #f1ca5a;
   }
 `
+
     return(
     <Wrapper className={this.props.global}>
         <Logo className="logo">

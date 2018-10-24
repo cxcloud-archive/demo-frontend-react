@@ -26,18 +26,15 @@ export default () => {
               width: -webkit-fill-available;
               display: inline-flex;
               align-items: center;
-              background-color: #cecece;
+              background-color: #F8F5E6;;
               padding: 20px 40px 20px 40px;
-              // @media only screen and (max-width: 400px) {
-              //   padding: 0px 20px 0px 20px;
-              // }
             }
             .FindPlan h2 {
-              color: #ff3764;
+              color: #f1ca5a;
             }
             .FindPlan span {
               font-style: italic;
-              color: #ff3764;
+              color: #f1ca5a;
             }
             .subcontainer {
               max-width: 75em;

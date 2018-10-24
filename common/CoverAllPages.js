@@ -6,23 +6,23 @@ export default ({ productName }) => {
     margin-bottom: 50px;
     `
   const Cover = styled.div`
-    background-image: url('https://images.pexels.com/photos/421888/pexels-photo-421888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-image: url('https://images.unsplash.com/photo-1481437156560-3205f6a55735?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3237a0f8fe29f2eab42aacda40b01069&auto=format&fit=crop&w=1371&q=80');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 15em;
-    border-top: 10px solid #ff3764;
+    background-position-y: -34em;
+    height: 26em;
+    border-top: 10px solid #d3b756;
     div {
       position: relative;
       top: -1px;
       width: 100%;
-      height: 87%;
-      background-color: rgba(63, 71, 81, 0.9);
+      height: 100%;
+      background-color: rgba(241, 202, 90, 0.4);
       text-align: center;
       display: table;
       margin: 0 auto;
       color: whitesmoke;
-    }
-  `
+    }`;
   return (
     <Wrapper>
       <Cover>

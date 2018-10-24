@@ -10,7 +10,6 @@ export default ({
   id,
   name,
   image,
-  description,
   priceInEuro,
   currency,
   sku,
@@ -23,6 +22,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   padding: 20px 40px 20px 40px;
+  text-transform: capitalize;
 `
 const ProductContainer = styled.div`
   display: flex;
@@ -45,9 +45,10 @@ const ProductInfo = styled.div`
   }
   h1 {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 28px;
+    color: #d3b756;
   }
-`
+`;
 const Rating = styled.div`
   display: inline-flex;
   align-items: center;
@@ -59,14 +60,20 @@ const Cart = styled.div`
   button {
     padding: 15px 20px 15px 20px;
     border-radius: 2px;
-    border-color: #eb4969;
-    background-color: #eb4969;
+    border-color: #f1ca5a;
+    background-color: #f1ca5a;
     color: whitesmoke;
     font-size: 12px;
     text-transform: uppercase;
+    & :hover {
+      border-color: #d3b756;
+      background-color: #d3b756;
+    }
   }
-`
-  return <Wrapper>
+`;
+console.log('hello ' + size)
+  return(
+    <Wrapper>
       <ProductContainer>
         <ProductImg>
           <img height="auto" width="70%" src={image} alt="blank" />
@@ -86,14 +93,14 @@ const Cart = styled.div`
               <a href="">Write first review</a>
             </p>
           </Rating>
-          <p>{description}</p>
-          {/* <p>Color: {color}</p> */}
-          {/* <p>Size: {size}</p> */}
+          <p>Color: {color}</p>
+          <p>Size: {size}</p>
           <p>€ {priceInEuro}</p>
           <Cart>
             <button>Add to cart</button>
           </Cart>
         </ProductInfo>
       </ProductContainer>
-    </Wrapper>;
+    </Wrapper>
+  );
 }

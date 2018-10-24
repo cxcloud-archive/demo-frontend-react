@@ -8,7 +8,7 @@ export default ({children}) => {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #4a4a4a;`;
   const button = styled.button`
-    background-color: #ff3764;
+    background-color: #f1ca5a;
     padding: 8px 30px 8px 30px;
     color: white;
     font-weight: 400;

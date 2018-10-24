@@ -8,7 +8,6 @@ export default class extends Component {
   state = {
     categories: [],
     productsList: [],
-    selectedCategory: null,
     show: true
   }
   async componentDidMount() {
@@ -29,6 +28,7 @@ export default class extends Component {
 
   render() {
     const { categories, productsList } = this.state;
+    console.log(categories)
 
     const Wrapper = styled.div`
       margin: 30px auto 30px auto;
@@ -82,8 +82,7 @@ export default class extends Component {
       margin: 0 auto;
       justify-content: center;
       `
-    return(
-      <Wrapper>
+    return <Wrapper>
         <ListOfCategories>
           {categories.map((category, i) => <CategoryName key={i}>
               <h2>
@@ -94,19 +93,22 @@ export default class extends Component {
             </CategoryName>)}
         </ListOfCategories>
         <SelectedCategory className="selected_category">
-          {productsList.map((item, i) => (
-            <Card
-              key={i}
-              id={item.id}
-              name={item.name.en}
-              image={item.masterVariant.images[0].url}
-              description={item.slug.en}
-              price={item.masterVariant.prices[0].value.centAmount}
-              currency={item.masterVariant.prices[0].value.currencyCode}
-            />
-          ))}
+          {productsList !== undefined && !(Object.keys(productsList).length === 0) ? (
+            productsList.map((item, i) => (
+              <Card
+                key={i}
+                id={item.id}
+                name={item.name.en}
+                image={item.masterVariant.images[0].url}
+                description={item.slug.en}
+                price={item.masterVariant.prices[0].value.centAmount}
+                currency={item.masterVariant.prices[0].value.currencyCode}
+              />
+            ))
+          ) : (
+            <p>No Products To Show</p>
+          )}
         </SelectedCategory>
-      </Wrapper>
-    );
+      </Wrapper>;
   }
 }
