@@ -33,30 +33,37 @@ export default class extends Component {
     const Wrapper = styled.div`
       margin: 30px auto 30px auto;
         padding: 20px 40px 20px 40px;
-        max-width: 75em;
         @media only screen and (max-width: 400px) {
           padding: 0px 20px 0px 20px;
         }
       }
     `
     const ListOfCategories = styled.div`
-      display: inline-flex;
-      justify-content: space-between;
-    `
+      margin: 0px auto 10em auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      :nth-child(2n) {
+        flex-grow: 1;
+      }`
     const CategoryName = styled.div`
+      width: 10em;
+      max-width: 12em;
       text-align: center;
-      margin: 0px 20px 0px 20px;
+      margin: 10px 10px 10px 10px;
       padding: 35px 40px 35px 40px;
+      box-shadow: 5px 7px rgba(74, 74, 74, 0.7);
       a {
         text-decoration: none;
         text-transform: uppercase;
-        color: #000000;
+        color: #4a4a4a;
       }
       a:hover {
-        color: #3a4048;
+        color: #4a4a4a;
       }
       a:visited {
-        color: #000000;
+        color: #4a4a4a;
       }
       & ::selection {
         color: red;
@@ -69,13 +76,14 @@ export default class extends Component {
         background-color: #f4f2f2;
       }`;
     const SelectedCategory = styled.div`
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      margin-top: 10em;
-    `
-
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100em;
+      margin: 0 auto;
+      justify-content: center;
+      `
     return(
-    <Wrapper>
+      <Wrapper>
         <ListOfCategories>
           {categories.map((category, i) => <CategoryName key={i}>
               <h2>
@@ -98,7 +106,7 @@ export default class extends Component {
             />
           ))}
         </SelectedCategory>
-        </Wrapper>
-        );
+      </Wrapper>
+    );
   }
 }

@@ -169,36 +169,41 @@ var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/Card.js";
       image = _ref.image,
       description = _ref.description,
       price = _ref.price,
-      currency = _ref.currency;
+      currency = _ref.currency,
+      title = _ref.title;
   var Wrapper = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].div.withConfig({
     displayName: "Card__Wrapper",
     componentId: "f01nyv-0"
-  })(["display:flex;justify-content:center;margin:10px;padding:10px;a{text-decoration:none;color:#000000;font-weight:500;}a:hover{color:#3a4048;}a:visited{color:#000000;}:nth-child(odd){background-color:#f7f7f7;}:nth-child(even){background-color:#f4f2f2;}"]);
+  })(["display:flex;justify-content:left;margin:20px 0px 20px 0px;padding:30px 20px 10px 30px;max-width:16em;margin:20px;width:100%;box-shadow:5px 7px rgba(74,74,74,0.6);a{text-decoration:none;color:#4a4a4a;font-size:14px;font-weight:500;text-transform:capitalize;}a:hover{color:#3a4048;}a:visited{color:#4a4a4a;}:nth-child(odd){background-color:#f7f7f7;border-color:transparent;}:nth-child(even){background-color:#f4f2f2;border-color:transparent;}"]);
+  var Title = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].h1.withConfig({
+    displayName: "Card__Title",
+    componentId: "f01nyv-1"
+  })(["font-weight:bold;font-size:20px;"]);
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Wrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 42
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_link___default.a, {
     href: "/Product?id=".concat(id),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 43
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 44
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 45
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 46
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: image,
@@ -207,27 +212,27 @@ var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/Card.js";
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 47
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 49
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Title, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 50
     }
   }, name), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 51
     }
   }, description), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 52
     }
   }, price, " ", currency))))));
 });
@@ -366,40 +371,40 @@ function (_Component) {
       var Wrapper = __WEBPACK_IMPORTED_MODULE_5_styled_components__["a" /* default */].div.withConfig({
         displayName: "CategoriesList__Wrapper",
         componentId: "o6txje-0"
-      })(["margin:30px auto 30px auto;padding:20px 40px 20px 40px;max-width:75em;@media only screen and (max-width:400px){padding:0px 20px 0px 20px;}}"]);
+      })(["margin:30px auto 30px auto;padding:20px 40px 20px 40px;@media only screen and (max-width:400px){padding:0px 20px 0px 20px;}}"]);
       var ListOfCategories = __WEBPACK_IMPORTED_MODULE_5_styled_components__["a" /* default */].div.withConfig({
         displayName: "CategoriesList__ListOfCategories",
         componentId: "o6txje-1"
-      })(["display:inline-flex;justify-content:space-between;"]);
+      })(["margin:0px auto 10em auto;display:flex;flex-direction:row;justify-content:center;flex-wrap:wrap;:nth-child(2n){flex-grow:1;}"]);
       var CategoryName = __WEBPACK_IMPORTED_MODULE_5_styled_components__["a" /* default */].div.withConfig({
         displayName: "CategoriesList__CategoryName",
         componentId: "o6txje-2"
-      })(["text-align:center;margin:0px 20px 0px 20px;padding:35px 40px 35px 40px;a{text-decoration:none;text-transform:uppercase;color:#000000;}a:hover{color:#3a4048;}a:visited{color:#000000;}&::selection{color:red;background:yellow;}&:nth-child(odd){background-color:#f7f7f7;}&:nth-child(even){background-color:#f4f2f2;}"]);
+      })(["width:10em;max-width:12em;text-align:center;margin:10px 10px 10px 10px;padding:35px 40px 35px 40px;box-shadow:5px 7px rgba(74,74,74,0.7);a{text-decoration:none;text-transform:uppercase;color:#4a4a4a;}a:hover{color:#4a4a4a;}a:visited{color:#4a4a4a;}&::selection{color:red;background:yellow;}&:nth-child(odd){background-color:#f7f7f7;}&:nth-child(even){background-color:#f4f2f2;}"]);
       var SelectedCategory = __WEBPACK_IMPORTED_MODULE_5_styled_components__["a" /* default */].div.withConfig({
         displayName: "CategoriesList__SelectedCategory",
         componentId: "o6txje-3"
-      })(["display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));margin-top:10em;"]);
+      })(["display:flex;flex-wrap:wrap;max-width:100em;margin:0 auto;justify-content:center;"]);
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Wrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 86
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(ListOfCategories, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 87
         }
       }, categories.map(function (category, i) {
         return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(CategoryName, {
           key: i,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 80
+            lineNumber: 88
           }
         }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h2", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 81
+            lineNumber: 89
           }
         }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("a", {
           href: "/Product?id=".concat(category.id),
@@ -408,14 +413,14 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 82
+            lineNumber: 90
           }
         }, category.name.en)));
       })), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(SelectedCategory, {
         className: "selected_category",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 96
         }
       }, productsList.map(function (item, i) {
         return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Card__["a" /* default */], {
@@ -428,7 +433,7 @@ function (_Component) {
           currency: item.masterVariant.prices[0].value.currencyCode,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 90
+            lineNumber: 98
           }
         });
       })));

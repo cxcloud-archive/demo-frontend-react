@@ -43,6 +43,10 @@ const ProductInfo = styled.div`
     padding: 0 40px 0 40px;
     line-height: 26px;
   }
+  h1 {
+    font-weight: bold;
+    font-size: 24px;
+  }
 `
 const Rating = styled.div`
   display: inline-flex;
@@ -69,7 +73,7 @@ const Cart = styled.div`
         </ProductImg>
         <ProductInfo>
           <div>
-            <h2>{name}</h2>
+            <h1>{name}</h1>
             <p>{sku}</p>
           </div>
           <Rating>
