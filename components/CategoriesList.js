@@ -11,9 +11,22 @@ export default class extends Component {
     show: true
   }
   async componentDidMount() {
-    await Util.fetchCategories().then((result) => {
-        this.setState({ categories: result });
-    })
+    // await Util.fetchCategories().then((result) => {
+    //     this.setState({
+    //       categories: result,
+    //     selectedCategory: result[0] });
+    //      Util.fetchProducts(this.state.selectedCategory).then(list => {
+    //        this.setState({ productsList: list.results });
+    //      });
+    // })
+    const cats = await Util.fetchCategories();
+    const prods = await Util.fetchProducts(cats[0]);
+    this.setState(
+      {
+        categories: cats,
+        productsList: prods.results
+      }
+    );
   }
   onClickCategory = (e, categoryId) => {
     e.preventDefault()
@@ -33,11 +46,12 @@ export default class extends Component {
     const Wrapper = styled.div`
       margin: 30px auto 30px auto;
         padding: 20px 40px 20px 40px;
+        color: darkslategrey;
         @media only screen and (max-width: 400px) {
           padding: 0px 20px 0px 20px;
         }
       }
-    `
+    `;
     const ListOfCategories = styled.div`
       margin: 0px auto 2em auto;
       padding-bottom: 5em;

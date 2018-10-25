@@ -244,7 +244,7 @@ var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/Card.js";
   var Wrapper = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.div.withConfig({
     displayName: "Card__Wrapper",
     componentId: "f01nyv-0"
-  })(["display:flex;justify-content:left;margin:20px 0px 20px 0px;padding:30px 20px 10px 30px;max-width:16em;min-height:24em;margin:20px;width:100%;box-shadow:2px 2px rgba(211,183,86,0.6);border:1px solid #d3b756;border-radius:3px;a{text-decoration:none;color:#4a4a4a;font-size:14px;font-weight:500;text-transform:capitalize;}a:hover{color:#3a4048;}a:visited{color:#4a4a4a;}"]);
+  })(["display:flex;justify-content:left;margin:20px 0px 20px 0px;padding:30px 20px 10px 30px;max-width:16em;min-height:24em;margin:20px;width:100%;box-shadow:2px 2px rgba(211,183,86,0.6);border:1px solid #d3b756;border-radius:3px;a{text-decoration:none;color:darkslategrey;font-size:14px;font-weight:500;text-transform:capitalize;}a:hover{color:#3a4048;}a:visited{color:darkslategrey;}"]);
   var Title = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.h1.withConfig({
     displayName: "Card__Title",
     componentId: "f01nyv-1"
@@ -406,20 +406,27 @@ function (_Component) {
       var _componentDidMount = _asyncToGenerator(
       /*#__PURE__*/
       __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.mark(function _callee() {
-        var _this2 = this;
-
+        var cats, prods;
         return __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return __WEBPACK_IMPORTED_MODULE_3__common_Util__["a" /* default */].fetchCategories().then(function (result) {
-                  _this2.setState({
-                    categories: result
-                  });
-                });
+                return __WEBPACK_IMPORTED_MODULE_3__common_Util__["a" /* default */].fetchCategories();
 
               case 2:
+                cats = _context.sent;
+                _context.next = 5;
+                return __WEBPACK_IMPORTED_MODULE_3__common_Util__["a" /* default */].fetchProducts(cats[0]);
+
+              case 5:
+                prods = _context.sent;
+                this.setState({
+                  categories: cats,
+                  productsList: prods.results
+                });
+
+              case 7:
               case "end":
                 return _context.stop();
             }
@@ -434,7 +441,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this2 = this;
 
       var _state = this.state,
           categories = _state.categories,
@@ -443,7 +450,7 @@ function (_Component) {
       var Wrapper = __WEBPACK_IMPORTED_MODULE_5_styled_components___default.a.div.withConfig({
         displayName: "CategoriesList__Wrapper",
         componentId: "o6txje-0"
-      })(["margin:30px auto 30px auto;padding:20px 40px 20px 40px;@media only screen and (max-width:400px){padding:0px 20px 0px 20px;}}"]);
+      })(["margin:30px auto 30px auto;padding:20px 40px 20px 40px;color:darkslategrey;@media only screen and (max-width:400px){padding:0px 20px 0px 20px;}}"]);
       var ListOfCategories = __WEBPACK_IMPORTED_MODULE_5_styled_components___default.a.div.withConfig({
         displayName: "CategoriesList__ListOfCategories",
         componentId: "o6txje-1"
@@ -459,30 +466,30 @@ function (_Component) {
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Wrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 115
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(ListOfCategories, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 116
         }
       }, categories.map(function (category, i) {
         return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(CategoryName, {
           key: i,
           href: "/Product?id=".concat(category.id),
           onClick: function onClick(e) {
-            return _this3.onClickCategory(e, category.id);
+            return _this2.onClickCategory(e, category.id);
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 104
+            lineNumber: 118
           }
         }, category.name.en);
       })), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(SelectedCategory, {
         className: "selected_category",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 126
         }
       }, productsList !== undefined && !(Object.keys(productsList).length === 0) ? productsList.map(function (item, i) {
         return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Card__["a" /* default */], {
@@ -495,13 +502,13 @@ function (_Component) {
           currency: item.masterVariant.prices[0].value.currencyCode,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 116
+            lineNumber: 130
           }
         });
       }) : __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 141
         }
       }, "No Products To Show")));
     }
@@ -624,30 +631,30 @@ function (_Component) {
       var Wrapper = __WEBPACK_IMPORTED_MODULE_4_styled_components___default.a.div.withConfig({
         displayName: "Category__Wrapper",
         componentId: "sc-1asykl6-0"
-      })(["div{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}"]);
+      })(["color:darkslategrey;div{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}"]);
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Wrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 31
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
         className: "selected_category",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 32
         }
       }, this.state.categories.map(function (item, i) {
         return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("p", {
           key: i,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 33
+            lineNumber: 34
           }
         }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("a", {
           href: '/Subcategory?id=',
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 34
+            lineNumber: 35
           }
         }, item.name.en));
       })));
@@ -689,6 +696,175 @@ var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/Cover.js";
     }
   }));
 });
+
+/***/ }),
+
+/***/ "./components/Features.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _default; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__("styled-components");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_styled_components__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fortawesome_react_fontawesome__ = __webpack_require__("@fortawesome/react-fontawesome");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fortawesome_react_fontawesome___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__fortawesome_react_fontawesome__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__fortawesome_fontawesome_free_solid__ = __webpack_require__("@fortawesome/fontawesome-free-solid");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__fortawesome_fontawesome_free_solid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__fortawesome_fontawesome_free_solid__);
+var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/Features.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+var _default =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(_default, _Component);
+
+  function _default() {
+    _classCallCheck(this, _default);
+
+    return _possibleConstructorReturn(this, (_default.__proto__ || Object.getPrototypeOf(_default)).apply(this, arguments));
+  }
+
+  _createClass(_default, [{
+    key: "render",
+    value: function render() {
+      var Wrapper = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.div.withConfig({
+        displayName: "Features__Wrapper",
+        componentId: "sc-1ylu8i9-0"
+      })(["display:flex;max-width:82em;flex-direction:column;text-align:center;flex-wrap:wrap;margin:0 auto;h1{font-size:20px;color:#d3b756;text-transform:uppercase;}div{display:inline-flex;margin-top:20px;"]);
+      var Feature = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.div.withConfig({
+        displayName: "Features__Feature",
+        componentId: "sc-1ylu8i9-1"
+      })(["display:flex;flex-direction:column;width:32em;margin:0 30px;line-height:28px;color:darkslategrey;.icon{margin:0 auto;margin-bottom:20px;}h1{margin:0;text-align:center;font-size:16px;font-weight:600;color:darkslategrey;}}"]);
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Wrapper, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44
+        }
+      }, "Amazing Features"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Feature, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "icon",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__fortawesome_react_fontawesome__["FontAwesomeIcon"], {
+        icon: __WEBPACK_IMPORTED_MODULE_3__fortawesome_fontawesome_free_solid__["faShippingFast"],
+        size: "4x",
+        color: "rgba(241, 202, 90, 0.7)",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        }
+      })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        }
+      }, "Free shipping"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        }
+      }, "Get free shipping on all orders over \u20AC100! and free returns to our Finnish return centre! Items are dispatched from the US and will arrive in 5-8 days.")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Feature, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "icon",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__fortawesome_react_fontawesome__["FontAwesomeIcon"], {
+        icon: __WEBPACK_IMPORTED_MODULE_3__fortawesome_fontawesome_free_solid__["faHandSpock"],
+        size: "4x",
+        color: "rgba(241, 202, 90, 0.7)",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        }
+      })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        }
+      }, "Amazing customer service"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        }
+      }, "Get Free Shipping on all orders over \u20AC100 and and free returns to our Finnish return centre. Items are dispatched from the US and will arrive in 5-8 days.")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Feature, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "icon",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__fortawesome_react_fontawesome__["FontAwesomeIcon"], {
+        icon: __WEBPACK_IMPORTED_MODULE_3__fortawesome_fontawesome_free_solid__["faHeart"],
+        size: "4x",
+        color: "rgba(241, 202, 90, 0.7)",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        }
+      })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 72
+        }
+      }, "No custom or duty fees!"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 73
+        }
+      }, "We pay these fees so you don't have to! The total billed at checkout is rthe final amount you pay, inclusive of VAT, with no additional charges at hte time of delivery!"))));
+    }
+  }]);
+
+  return _default;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+
 
 /***/ }),
 
@@ -1010,29 +1186,29 @@ function (_Component) {
       var Title = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.div.withConfig({
         displayName: "Header__Title",
         componentId: "an08yg-2"
-      })(["p{color:#939393;font-weight:200;}span{color:#f1ca5a;}"]);
+      })(["margin-right:30px;p{color:#939393;font-weight:200;}span{color:#f1ca5a;}"]);
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Wrapper, {
         className: this.props.global,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 44
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Logo, {
         className: "logo",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 45
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 46
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 47
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
         width: "170px",
@@ -1041,23 +1217,23 @@ function (_Component) {
         alt: "blank",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 48
         }
       })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Title, {
         className: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 52
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 53
         }
       }, "The best ", __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 54
         }
       }, "imaginery"), " operator in the world.")));
     }
@@ -1095,63 +1271,38 @@ var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/Layout.js";
     displayName: "Layout__button",
     componentId: "sc-1c610dc-1"
   })(["background-color:#f1ca5a;padding:8px 30px 8px 30px;color:white;font-weight:400;font-size:18px;border-radius:8px;margin-top:20px;border-color:transparent;a{color:white;text-decoration:none;}"]);
-  var title = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.h1.withConfig({
-    displayName: "Layout__title",
+  var Wrapper = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.div.withConfig({
+    displayName: "Layout__Wrapper",
     componentId: "sc-1c610dc-2"
-  })(["font-size:24px;@media only screen and (max-width:400px){font-size:20px;color:#4a4a4a;}"]);
-  var big = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.h1.withConfig({
-    displayName: "Layout__big",
-    componentId: "sc-1c610dc-3"
-  })(["font-size:20px;"]);
-  var medium = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.p.withConfig({
-    displayName: "Layout__medium",
-    componentId: "sc-1c610dc-4"
-  })(["font-size:16px;"]);
-  var small = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.p.withConfig({
-    displayName: "Layout__small",
-    componentId: "sc-1c610dc-5"
-  })(["font-size:12px;"]);
-  var light = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.p.withConfig({
-    displayName: "Layout__light",
-    componentId: "sc-1c610dc-6"
-  })(["font-weight:200;"]);
-  var bold = __WEBPACK_IMPORTED_MODULE_3_styled_components___default.a.p.withConfig({
-    displayName: "Layout__bold",
-    componentId: "sc-1c610dc-7"
-  })(["font-weight:600;"]);
+  })(["color:darkslategrey;"]);
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 29
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Wrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 30
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_Header__["a" /* default */], {
     global: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 31
     }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("main", {
     className: "main",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 32
     }
   }, children), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Footer__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 33
     }
-  })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("style", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 56
-    }
-  }, "\n\n          .bold {\n              font-weight: 600;\n          }\n          .backgroundLightGrey {\n              background-color: lightgrey;\n          }\n          .backgroundGrey {\n              background-color: grey;\n          }\n          .backgroundDarkGrey {\n              background-color: darkgrey;\n          }\n          /* Media queries */\n          @media only screen and (max-width : 400px) {\n            .FindPlan {\n            padding: 0px 20px 0px 20px;\n            }\n            .title {\n\n            }\n          }\n        "));
+  })));
 });
 
 /***/ }),
@@ -1172,8 +1323,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_Util__ = __webpack_require__("./common/Util.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Layout__ = __webpack_require__("./components/Layout.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Header__ = __webpack_require__("./components/Header.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_lodash__ = __webpack_require__("lodash");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_lodash__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Features__ = __webpack_require__("./components/Features.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_lodash__ = __webpack_require__("lodash");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_lodash__);
 
 var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/pages/index.js";
 
@@ -1192,6 +1344,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -1223,24 +1376,29 @@ function (_React$Component) {
         className: "Homepage",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 24
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Cover__["a" /* default */], {
         className: "cover",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 25
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_CategoriesList__["a" /* default */], {
         categories: categories,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 26
+        }
+      }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__components_Features__["a" /* default */], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_FindPlan__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 28
         }
       }));
     }
@@ -1256,13 +1414,13 @@ function (_React$Component) {
             switch (_context.prev = _context.next) {
               case 0:
                 query = _ref.query, req = _ref.req;
-                productId = __WEBPACK_IMPORTED_MODULE_8_lodash___default.a.get(query, 'id');
+                productId = __WEBPACK_IMPORTED_MODULE_9_lodash___default.a.get(query, 'id');
                 _context.next = 4;
                 return __WEBPACK_IMPORTED_MODULE_5__common_Util__["a" /* default */].fetchProducts(productId);
 
               case 4:
                 commerceProducts = _context.sent;
-                categoryId = __WEBPACK_IMPORTED_MODULE_8_lodash___default.a.get(query);
+                categoryId = __WEBPACK_IMPORTED_MODULE_9_lodash___default.a.get(query);
                 _context.next = 8;
                 return __WEBPACK_IMPORTED_MODULE_5__common_Util__["a" /* default */].fetchCategories(categoryId);
 
@@ -1306,6 +1464,20 @@ module.exports = __webpack_require__("./pages/index.js");
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/regenerator");
+
+/***/ }),
+
+/***/ "@fortawesome/fontawesome-free-solid":
+/***/ (function(module, exports) {
+
+module.exports = require("@fortawesome/fontawesome-free-solid");
+
+/***/ }),
+
+/***/ "@fortawesome/react-fontawesome":
+/***/ (function(module, exports) {
+
+module.exports = require("@fortawesome/react-fontawesome");
 
 /***/ }),
 

@@ -30,6 +30,7 @@ export default class extends Component {
     }
   `
 const Title = styled.div`
+  margin-right: 30px;
   p {
     color: #939393;
     font-weight: 200;
@@ -37,7 +38,7 @@ const Title = styled.div`
   span {
     color: #f1ca5a;
   }
-`
+`;
 
     return(
     <Wrapper className={this.props.global}>

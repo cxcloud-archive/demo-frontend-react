@@ -17,7 +17,7 @@ export default ({ id, name, image, description, price, currency, title }) => {
     border-radius: 3px;
     a {
       text-decoration: none;
-      color: #4a4a4a;
+      color: darkslategrey;
       font-size: 14px;
       font-weight: 500;
       text-transform: capitalize;
@@ -26,7 +26,7 @@ export default ({ id, name, image, description, price, currency, title }) => {
       color: #3a4048;
     }
     a:visited {
-      color: #4a4a4a;
+      color: darkslategrey;
     }`;
   const Title = styled.h1`
     font-weight: bold;

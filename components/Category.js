@@ -21,6 +21,7 @@ export default class extends Component {
 
 
 const Wrapper = styled.div`
+  color: darkslategrey;
   div {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));

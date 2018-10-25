@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import CategoriesList from './CategoriesList'
 import styled from 'styled-components'
-var FontAwesome = require('react-fontawesome')
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCheckSquare, faCart, faFemale, faStar, faCoffee } from '@fortawesome/fontawesome-free-solid'
+import { faStar } from '@fortawesome/fontawesome-free-solid'
 
 export default ({
   id,
@@ -23,7 +21,8 @@ const Wrapper = styled.div`
   justify-content: center;
   padding: 20px 40px 20px 40px;
   text-transform: capitalize;
-`
+  color: darkslategrey;
+`;
 const ProductContainer = styled.div`
   display: flex;
   align-items: center;
@@ -84,7 +83,7 @@ console.log('hello ' + size)
     <Wrapper>
       <ProductContainer>
         <ProductImg>
-          <img height="auto" width="70%" src={image} alt="blank" />
+          <img height="640" width="480" src={image} alt="blank" />
         </ProductImg>
         <ProductInfo>
           <div>

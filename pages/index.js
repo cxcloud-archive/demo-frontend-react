@@ -5,6 +5,7 @@ import FindPlan from '../components/FindPlan';
 import Util from '../common/Util';
 import Layout from '../components/Layout';
 import Header from '../components/Header'
+import Features from '../components/Features'
 import _ from 'lodash';
 
 export default class extends React.Component {
@@ -23,6 +24,7 @@ export default class extends React.Component {
       <Layout className="Homepage">
         <Cover className="cover" />
         <CategoriesList categories={categories} />
+        <Features />
         <FindPlan />
       </Layout>
     );

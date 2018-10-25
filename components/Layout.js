@@ -21,64 +21,17 @@ export default ({children}) => {
       text-decoration: none;
     }`
 
-    const title = styled.h1`
-      font-size: 24px;
-      @media only screen and (max-width : 400px) {
-      font-size: 20px;
-      color: #4a4a4a;
-      }
+    const Wrapper = styled.div`
+      color: darkslategrey;
     `;
-      const big = styled.h1`
-        font-size: 20px;
-      `;
-      const medium = styled.p`
-        font-size: 16px;
-      `;
-      const small = styled.p`
-        font-size: 12px;
-      `;
-
-      const light = styled.p`
-        font-weight: 200;
-      `
-      const bold = styled.p`
-        font-weight: 600;
-      `
-
 
   return(
     <div>
-        <div>
+        <Wrapper>
             <Header global />
             <main className="main">{children}</main>
             <Footer />
-        </div>
-        <style>
-        {`
-
-          .bold {
-              font-weight: 600;
-          }
-          .backgroundLightGrey {
-              background-color: lightgrey;
-          }
-          .backgroundGrey {
-              background-color: grey;
-          }
-          .backgroundDarkGrey {
-              background-color: darkgrey;
-          }
-          /* Media queries */
-          @media only screen and (max-width : 400px) {
-            .FindPlan {
-            padding: 0px 20px 0px 20px;
-            }
-            .title {
-
-            }
-          }
-        `}
-        </style>
+        </Wrapper>
     </div>
 );
 }
