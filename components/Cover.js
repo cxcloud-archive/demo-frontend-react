@@ -11,11 +11,11 @@ const Wrapper = styled.div`
   width: 100%;
   display: inline-grid;
   border-top: 10px solid rgba(241, 202, 90, 1);
-  grid-area: cover; 
+  grid-area: cover;
   div {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 80%;
     background-color: rgba(241, 202, 90, 0.4);
   }
 `;

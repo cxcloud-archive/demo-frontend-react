@@ -9,9 +9,12 @@ export default ({ id, name, image, description, price, currency, title }) => {
     margin: 20px 0px 20px 0px;
     padding: 30px 20px 10px 30px;
     max-width: 16em;
+    min-height: 24em;
     margin: 20px;
     width: 100%;
-    box-shadow: 5px 7px rgba(74, 74, 74, 0.6);
+    box-shadow: 2px 2px rgba(211, 183, 86, 0.6);
+    border: 1px solid #d3b756;
+    border-radius: 3px;
     a {
       text-decoration: none;
       color: #4a4a4a;
@@ -24,14 +27,6 @@ export default ({ id, name, image, description, price, currency, title }) => {
     }
     a:visited {
       color: #4a4a4a;
-    }
-    :nth-child(odd) {
-      background-color: #f7f7f7;
-      border-color: transparent;
-    }
-    :nth-child(even) {
-      background-color: #f4f2f2;
-      border-color: transparent;
     }`;
   const Title = styled.h1`
     font-weight: bold;
@@ -44,7 +39,7 @@ export default ({ id, name, image, description, price, currency, title }) => {
         <a>
           <div>
             <div>
-              <img src={image} width="80" height="120" alt="" />
+              <img src={image} width="180" height="240" alt="" />
             </div>
             <div>
               <Title>{name}</Title>

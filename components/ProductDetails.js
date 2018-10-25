@@ -54,20 +54,28 @@ const Rating = styled.div`
   align-items: center;
   p {
     margin-left: 15px;
+    a {
+      color: #000000;
+      :visited {
+        color: #000000;
+      }
+    }
   }
-`
+`;
 const Cart = styled.div`
   button {
     padding: 15px 20px 15px 20px;
     border-radius: 2px;
     border-color: #f1ca5a;
-    background-color: #f1ca5a;
-    color: whitesmoke;
+    background-color: #fff;
+    color: #d3b756
     font-size: 12px;
+    font-weight: 600;
     text-transform: uppercase;
     & :hover {
       border-color: #d3b756;
       background-color: #d3b756;
+      color: whitesmoke;
     }
   }
 `;

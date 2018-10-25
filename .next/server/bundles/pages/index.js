@@ -244,7 +244,7 @@ var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/Card.js";
   var Wrapper = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.div.withConfig({
     displayName: "Card__Wrapper",
     componentId: "f01nyv-0"
-  })(["display:flex;justify-content:left;margin:20px 0px 20px 0px;padding:30px 20px 10px 30px;max-width:16em;margin:20px;width:100%;box-shadow:5px 7px rgba(74,74,74,0.6);a{text-decoration:none;color:#4a4a4a;font-size:14px;font-weight:500;text-transform:capitalize;}a:hover{color:#3a4048;}a:visited{color:#4a4a4a;}:nth-child(odd){background-color:#f7f7f7;border-color:transparent;}:nth-child(even){background-color:#f4f2f2;border-color:transparent;}"]);
+  })(["display:flex;justify-content:left;margin:20px 0px 20px 0px;padding:30px 20px 10px 30px;max-width:16em;min-height:24em;margin:20px;width:100%;box-shadow:2px 2px rgba(211,183,86,0.6);border:1px solid #d3b756;border-radius:3px;a{text-decoration:none;color:#4a4a4a;font-size:14px;font-weight:500;text-transform:capitalize;}a:hover{color:#3a4048;}a:visited{color:#4a4a4a;}"]);
   var Title = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.h1.withConfig({
     displayName: "Card__Title",
     componentId: "f01nyv-1"
@@ -253,57 +253,57 @@ var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/Card.js";
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Wrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 37
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_link___default.a, {
     href: "/Product?id=".concat(id),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 38
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 39
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 40
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 41
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
     src: image,
-    width: "80",
-    height: "120",
+    width: "180",
+    height: "240",
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 42
     }
   })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 44
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Title, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 45
     }
   }, name), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 46
     }
   }, description), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 47
     }
   }, priceInEuro, " ", currency))))));
 });
@@ -447,11 +447,11 @@ function (_Component) {
       var ListOfCategories = __WEBPACK_IMPORTED_MODULE_5_styled_components___default.a.div.withConfig({
         displayName: "CategoriesList__ListOfCategories",
         componentId: "o6txje-1"
-      })(["margin:0px auto 10em auto;display:flex;flex-direction:row;justify-content:center;flex-wrap:wrap;:nth-child(2n){flex-grow:1;}"]);
-      var CategoryName = __WEBPACK_IMPORTED_MODULE_5_styled_components___default.a.div.withConfig({
+      })(["margin:0px auto 2em auto;padding-bottom:5em;border-bottom:1px solid rgba(211,183,86,1);display:flex;flex-direction:row;justify-content:center;flex-wrap:wrap;:active{color:rgba(211,183,86,1);}:focus{color:red;}:target{color:red;}:nth-child(2n){flex-grow:1;}"]);
+      var CategoryName = __WEBPACK_IMPORTED_MODULE_5_styled_components___default.a.button.withConfig({
         displayName: "CategoriesList__CategoryName",
         componentId: "o6txje-2"
-      })(["width:10em;max-width:12em;text-align:center;margin:10px 10px 10px 10px;padding:35px 40px 35px 40px;box-shadow:5px 7px rgba(74,74,74,0.7);a{text-decoration:none;text-transform:uppercase;color:#4a4a4a;}a:hover{color:#4a4a4a;}a:visited{color:#4a4a4a;}&::selection{color:red;background:yellow;}&:nth-child(odd){background-color:#f7f7f7;}&:nth-child(even){background-color:#f4f2f2;}"]);
+      })(["width:8em;font-size:22px;height:2em;text-align:center;margin:18px;border:1px solid rgba(211,183,86,1);text-decoration:none;text-transform:uppercase;color:#4a4a4a;border-radius:2px;:hover{background-color:rgba(211,183,86,1);color:whitesmoke;}"]);
       var SelectedCategory = __WEBPACK_IMPORTED_MODULE_5_styled_components___default.a.div.withConfig({
         displayName: "CategoriesList__SelectedCategory",
         componentId: "o6txje-3"
@@ -459,40 +459,30 @@ function (_Component) {
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Wrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 101
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(ListOfCategories, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 102
         }
       }, categories.map(function (category, i) {
         return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(CategoryName, {
           key: i,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 87
-          }
-        }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h2", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 88
-          }
-        }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("a", {
           href: "/Product?id=".concat(category.id),
           onClick: function onClick(e) {
             return _this3.onClickCategory(e, category.id);
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 89
+            lineNumber: 104
           }
-        }, category.name.en)));
+        }, category.name.en);
       })), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(SelectedCategory, {
         className: "selected_category",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 112
         }
       }, productsList !== undefined && !(Object.keys(productsList).length === 0) ? productsList.map(function (item, i) {
         return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Card__["a" /* default */], {
@@ -505,13 +495,13 @@ function (_Component) {
           currency: item.masterVariant.prices[0].value.currencyCode,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 98
+            lineNumber: 116
           }
         });
       }) : __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 127
         }
       }, "No Products To Show")));
     }
@@ -686,7 +676,7 @@ var _jsxFileName = "/Users/damarlin/cx-cloud-eshop/components/Cover.js";
   var Wrapper = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.div.withConfig({
     displayName: "Cover__Wrapper",
     componentId: "sc-13p02vl-0"
-  })(["background-image:url('https://images.unsplash.com/photo-1481437156560-3205f6a55735?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3237a0f8fe29f2eab42aacda40b01069&auto=format&fit=crop&w=1371&q=80');background-repeat:no-repeat;background-size:cover;background-position-y:-34em;height:34em;width:100%;display:inline-grid;border-top:10px solid rgba(241,202,90,1);grid-area:cover;div{position:relative;width:100%;height:100%;background-color:rgba(241,202,90,0.4);}"]);
+  })(["background-image:url('https://images.unsplash.com/photo-1481437156560-3205f6a55735?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3237a0f8fe29f2eab42aacda40b01069&auto=format&fit=crop&w=1371&q=80');background-repeat:no-repeat;background-size:cover;background-position-y:-34em;height:34em;width:100%;display:inline-grid;border-top:10px solid rgba(241,202,90,1);grid-area:cover;div{position:relative;width:100%;height:80%;background-color:rgba(241,202,90,0.4);}"]);
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Wrapper, {
     __source: {
       fileName: _jsxFileName,

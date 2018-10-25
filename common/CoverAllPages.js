@@ -16,7 +16,7 @@ export default ({ productName }) => {
       position: relative;
       top: -1px;
       width: 100%;
-      height: 100%;
+      height: 80%;
       background-color: rgba(241, 202, 90, 0.4);
       text-align: center;
       display: table;

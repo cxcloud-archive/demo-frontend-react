@@ -39,42 +39,58 @@ export default class extends Component {
       }
     `
     const ListOfCategories = styled.div`
-      margin: 0px auto 10em auto;
+      margin: 0px auto 2em auto;
+      padding-bottom: 5em;
+      border-bottom: 1px solid rgba(211, 183, 86, 1);
       display: flex;
       flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
+      :active {
+        color: rgba(211, 183, 86, 1);
+      }
+      :focus {
+        color: red;
+      }
+      :target {
+        color: red;
+      }
       :nth-child(2n) {
         flex-grow: 1;
-      }`
-    const CategoryName = styled.div`
-      width: 10em;
-      max-width: 12em;
-      text-align: center;
-      margin: 10px 10px 10px 10px;
-      padding: 35px 40px 35px 40px;
-      box-shadow: 5px 7px rgba(74, 74, 74, 0.7);
-      a {
-        text-decoration: none;
-        text-transform: uppercase;
-        color: #4a4a4a;
-      }
-      a:hover {
-        color: #4a4a4a;
-      }
-      a:visited {
-        color: #4a4a4a;
-      }
-      & ::selection {
-        color: red;
-        background: yellow;
-      }
-      & :nth-child(odd) {
-        background-color: #f7f7f7;
-      }
-      & :nth-child(even) {
-        background-color: #f4f2f2;
       }`;
+    const CategoryName = styled.button`
+      width: 8em;
+      font-size: 22px;
+      height: 2em;
+      text-align: center;
+      margin: 18px;
+      border: 1px solid rgba(211, 183, 86, 1);
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #4a4a4a;
+      border-radius: 2px;
+      :hover {
+        background-color: rgba(211, 183, 86, 1);
+        color: whitesmoke;
+      }
+      // a {
+
+      // }
+      // a:hover {
+      //   color: #d3b756;
+      // }
+      // a:visited {
+      //   color: #4a4a4a;
+      // }
+      // & ::selection {
+      //   color: red;
+      //   background: yellow;
+      // }
+      // :hover {
+      //   border-color: #d3b756;
+      //   background-color: #d3b756;
+      //   color: whitesmoke;
+      // }`;
     const SelectedCategory = styled.div`
       display: flex;
       flex-wrap: wrap;
@@ -84,16 +100,18 @@ export default class extends Component {
       `
     return <Wrapper>
         <ListOfCategories>
-          {categories.map((category, i) => <CategoryName key={i}>
-              <h2>
-                <a href={`/Product?id=${category.id}`} onClick={e => this.onClickCategory(e, category.id)}>
-                  {category.name.en}
-                </a>
-              </h2>
-            </CategoryName>)}
+          {categories.map((category, i) => (
+            <CategoryName
+              key={i}
+              href={`/Product?id=${category.id}`}
+              onClick={e => this.onClickCategory(e, category.id)}>
+            {category.name.en}
+            </CategoryName>
+          ))}
         </ListOfCategories>
         <SelectedCategory className="selected_category">
-          {productsList !== undefined && !(Object.keys(productsList).length === 0) ? (
+          {productsList !== undefined &&
+          !(Object.keys(productsList).length === 0) ? (
             productsList.map((item, i) => (
               <Card
                 key={i}
