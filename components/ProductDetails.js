@@ -78,7 +78,6 @@ const Cart = styled.div`
     }
   }
 `;
-console.log('hello ' + size)
   return(
     <Wrapper>
       <ProductContainer>

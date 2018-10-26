@@ -4,7 +4,6 @@ import CoverAllPages from '../common/CoverAllPages'
 import ProductDetails from '../components/ProductDetails'
 import FindPlan from '../components/FindPlan'
 import Util from '../common/Util'
-import Category from '../components/Category'
 import _ from 'lodash'
 import './index'
 import styled from 'styled-components'
@@ -19,9 +18,7 @@ export default class extends Component {
   render() {
     const { product } = this.props;
     const priceInEuro = (product.masterVariant.prices[0].value.centAmount / 100).toFixed(2);
-console.log(
-  product
-);
+
     return(
       <Layout>
           <CoverAllPages className="CoverAllPages" />

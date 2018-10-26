@@ -32,23 +32,25 @@ export default ({ id, name, image, description, price, currency, title }) => {
     font-weight: bold;
     font-size: 20px;
   `
+  const Price = styled.p`
+    padding-top: 10px;
+    border-top: 1px solid gray;
+  `
   const priceInEuro = (price / 100).toFixed(2);
 
   return <Wrapper>
       <Link href={`/Product?id=${id}`}>
         <a>
-          <div>
             <div>
               <img src={image} width="180" height="240" alt="" />
             </div>
             <div>
               <Title>{name}</Title>
               <p>{description}</p>
-              <p>
+              <Price>
                 {priceInEuro} {currency}
-              </p>
+              </Price>
             </div>
-          </div>
         </a>
       </Link>
     </Wrapper>;

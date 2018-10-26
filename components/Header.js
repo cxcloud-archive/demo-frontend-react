@@ -2,19 +2,34 @@ import React, { Component } from 'react'
 import Link from 'next/link'
 import Util from '../common/Util'
 import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar, faHandSpock, faShippingFast, faHeart, faAngleDown } from '@fortawesome/fontawesome-free-solid'
 
 export default class extends Component {
   render() {
+
   const Wrapper = styled.div`
-    background-color: #fff;
+
+    top: 2em;
+    right:20em;
+    position: absolute;
     display: flex;
     flex-direction: row;
-    text-align: center;
-    align-items: center;
-    @media only screen and (max-width: 480px) {
+    list-style: none;
+    ul {
       display: flex;
-      flex-direction: column;
+      li {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 500;
+      margin: auto 20px auto 20px;
+      p {
+        margin-right: 10px;
+      }
     }
+  }
   `
   const Logo = styled.div`
     flex: auto 1 1;
@@ -29,19 +44,23 @@ export default class extends Component {
       }
     }
   `
-const Title = styled.div`
-  margin-right: 30px;
-  p {
-    color: #939393;
-    font-weight: 200;
-  }
-  span {
-    color: #f1ca5a;
-  }
-`;
 
-    return(
-    <Wrapper className={this.props.global}>
+  return(
+<Wrapper>
+    <ul>
+        <li>
+          <p>Home</p>
+          <FontAwesomeIcon icon={faAngleDown} />
+        </li>
+        <li>
+          <p>Catalogue</p>
+          <FontAwesomeIcon icon={faAngleDown} />
+        </li>
+        <li>
+          <p>About</p>
+          <FontAwesomeIcon icon={faAngleDown} />
+        </li>
+    </ul>
         <Logo className="logo">
           <Link href="/">
             <a>
@@ -49,12 +68,8 @@ const Title = styled.div`
             </a>
           </Link>
         </Logo>
-        <Title className="title">
-          <p>
-            The best <span>imaginery</span> operator in the world.
-          </p>
-        </Title>
-      </Wrapper>
+        </Wrapper>
       );
   }
 }
+

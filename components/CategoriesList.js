@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Category from './Category';
+import CategoryCard from './CategoryCard';
 import Util from '../common/Util';
-import Card from '../components/Card'
+import ProductsCard from '../components/ProductsCard'
 import styled from 'styled-components'
+import Category from '../pages/Category'
 
 export default class extends Component {
   state = {
@@ -11,16 +12,8 @@ export default class extends Component {
     show: true
   }
   async componentDidMount() {
-    // await Util.fetchCategories().then((result) => {
-    //     this.setState({
-    //       categories: result,
-    //     selectedCategory: result[0] });
-    //      Util.fetchProducts(this.state.selectedCategory).then(list => {
-    //        this.setState({ productsList: list.results });
-    //      });
-    // })
     const cats = await Util.fetchCategories();
-    const prods = await Util.fetchProducts(cats[0]);
+    const prods = await Util.fetchProducts(cats[0].id);
     this.setState(
       {
         categories: cats,
@@ -41,7 +34,6 @@ export default class extends Component {
 
   render() {
     const { categories, productsList } = this.state;
-    console.log(categories)
 
     const Wrapper = styled.div`
       margin: 30px auto 30px auto;
@@ -54,6 +46,7 @@ export default class extends Component {
     `;
     const ListOfCategories = styled.div`
       margin: 0px auto 2em auto;
+      max-width: 100em;
       padding-bottom: 5em;
       border-bottom: 1px solid rgba(211, 183, 86, 1);
       display: flex;
@@ -72,39 +65,33 @@ export default class extends Component {
       :nth-child(2n) {
         flex-grow: 1;
       }`;
-    const CategoryName = styled.button`
-      width: 8em;
+  const CategoryName = styled.div`
+    background-image: url(https://images.unsplash.com/photo-1489939078242-0a1dc4a08f06?ixlib=rb-0.3.5…EyMDd9&s=c53b328…&auto=format&fit=crop&w=1350&q=80);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(74, 74, 74, 0.7);
+    width: 24em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 13em;
+    text-align: center;
+    margin: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #4a4a4a;
+    border-radius: 2px;
+    h1 {
       font-size: 22px;
-      height: 2em;
-      text-align: center;
-      margin: 18px;
-      border: 1px solid rgba(211, 183, 86, 1);
-      text-decoration: none;
-      text-transform: uppercase;
-      color: #4a4a4a;
-      border-radius: 2px;
+      background-color: rgba(245,245,245,0.8);
+      padding: 30px 30px 30px 30px;
       :hover {
-        background-color: rgba(211, 183, 86, 1);
-        color: whitesmoke;
-      }
-      // a {
-
-      // }
-      // a:hover {
-      //   color: #d3b756;
-      // }
-      // a:visited {
-      //   color: #4a4a4a;
-      // }
-      // & ::selection {
-      //   color: red;
-      //   background: yellow;
-      // }
-      // :hover {
-      //   border-color: #d3b756;
-      //   background-color: #d3b756;
-      //   color: whitesmoke;
-      // }`;
+      cursor: pointer;
+      color: rgba(245,245,245,);
+    }
+  }
+`
     const SelectedCategory = styled.div`
       display: flex;
       flex-wrap: wrap;
@@ -112,35 +99,18 @@ export default class extends Component {
       margin: 0 auto;
       justify-content: center;
       `
-    return <Wrapper>
+
+return <Wrapper>
         <ListOfCategories>
           {categories.map((category, i) => (
-            <CategoryName
-              key={i}
-              href={`/Product?id=${category.id}`}
-              onClick={e => this.onClickCategory(e, category.id)}>
-            {category.name.en}
-            </CategoryName>
+            <CategoryCard
+            key={i}
+            id={category.id}
+            name={category.name.en}
+            // onClick={e => this.onClickCategory(e, category.id)}
+            />
           ))}
         </ListOfCategories>
-        <SelectedCategory className="selected_category">
-          {productsList !== undefined &&
-          !(Object.keys(productsList).length === 0) ? (
-            productsList.map((item, i) => (
-              <Card
-                key={i}
-                id={item.id}
-                name={item.name.en}
-                image={item.masterVariant.images[0].url}
-                description={item.slug.en}
-                price={item.masterVariant.prices[0].value.centAmount}
-                currency={item.masterVariant.prices[0].value.currencyCode}
-              />
-            ))
-          ) : (
-            <p>No Products To Show</p>
-          )}
-        </SelectedCategory>
       </Wrapper>;
   }
 }

@@ -1,27 +1,24 @@
-import React from 'react'
+import React, { Component } from 'react'
+import Link from 'next/link'
+import Util from '../common/Util'
 import styled from 'styled-components'
 
-export default () => {
-const Wrapper = styled.div`
-  background-image: url('https://images.unsplash.com/photo-1481437156560-3205f6a55735?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3237a0f8fe29f2eab42aacda40b01069&auto=format&fit=crop&w=1371&q=80');
+export default class extends Component {
+
+  render() {
+    const Wrapper = styled.div`
+  
+    @media only screen and (max-width: 480px) {
+      display: flex;
+      flex-direction: column;
+    }
+    background-image: url('https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7ef79a01f0a12450049b7d20cd10f93c&auto=format&fit=crop&w=1267&q=80');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -34em;
-  height: 34em;
+  background-position: center;
+  height: 50em;
   width: 100%;
-  display: inline-grid;
-  border-top: 10px solid rgba(241, 202, 90, 1);
-  grid-area: cover;
-  div {
-    position: relative;
-    width: 100%;
-    height: 80%;
-    background-color: rgba(241, 202, 90, 0.4);
+  `
+    return(<Wrapper></Wrapper>)
   }
-`;
-  return (
-    <Wrapper>
-      <div></div>
-    </Wrapper>
-  );
 }

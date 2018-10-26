@@ -1,12 +1,13 @@
 import React from 'react';
-import Cover from './../components/Cover';
 import CategoriesList from '../components/CategoriesList';
 import FindPlan from '../components/FindPlan';
 import Util from '../common/Util';
 import Layout from '../components/Layout';
 import Header from '../components/Header'
 import Features from '../components/Features'
+import Cover from '../components/Cover'
 import _ from 'lodash';
+
 
 export default class extends React.Component {
   static async getInitialProps({ query, req }) {
@@ -22,7 +23,7 @@ export default class extends React.Component {
     const { commerceProducts, categories } = this.props;
     return (
       <Layout className="Homepage">
-        <Cover className="cover" />
+        <Cover />
         <CategoriesList categories={categories} />
         <Features />
         <FindPlan />
