@@ -46,30 +46,26 @@ export default class extends Component {
   `
 
   return(
-<Wrapper>
-    <ul>
+    <Wrapper>
+      <ul>
         <li>
-          <p>Home</p>
-          <FontAwesomeIcon icon={faAngleDown} />
-        </li>
-        <li>
-          <p>Catalogue</p>
-          <FontAwesomeIcon icon={faAngleDown} />
-        </li>
-        <li>
-          <p>About</p>
-          <FontAwesomeIcon icon={faAngleDown} />
-        </li>
-    </ul>
-        <Logo className="logo">
-          <Link href="/">
-            <a>
-              <img width="170px" height="auto" src="/static/images/cxcloud_operator_logo.jpg" alt="blank" />
-            </a>
+          <Link href={{ pathname: '/', query: { name: 'home' } }}>
+            <a><p>Home</p><FontAwesomeIcon icon={faAngleDown} /></a>
           </Link>
-        </Logo>
-        </Wrapper>
-      );
+        </li>
+        <li>
+          <Link href={{ pathname: '/CategoryPage', query: { name: 'categories' } }}>
+            <a><p>Categories</p><FontAwesomeIcon icon={faAngleDown} /></a>
+          </Link>
+        </li>
+        <li>
+          <Link href={{ pathname: '/About', query: { name: 'about' } }}>
+            <a><p>About</p><FontAwesomeIcon icon={faAngleDown} /></a>
+          </Link>
+        </li>
+      </ul>
+    </Wrapper>
+    );
   }
 }
 

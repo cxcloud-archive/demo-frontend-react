@@ -39,7 +39,7 @@ export default ({ id, name, image, description, price, currency, title }) => {
   const priceInEuro = (price / 100).toFixed(2);
 
   return <Wrapper>
-      <Link href={`/Product?id=${id}`}>
+      <Link href={`/ProductPage?id=${id}`}>
         <a>
             <div>
               <img src={image} width="180" height="240" alt="" />

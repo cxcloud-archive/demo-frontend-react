@@ -3,7 +3,7 @@ import CategoryCard from './CategoryCard';
 import Util from '../common/Util';
 import ProductsCard from '../components/ProductsCard'
 import styled from 'styled-components'
-import Category from '../pages/Category'
+import Categories from '../pages/CategoryPage'
 
 export default class extends Component {
   state = {
