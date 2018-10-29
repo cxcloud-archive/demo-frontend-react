@@ -25,6 +25,13 @@ export default class extends Component {
       font-size: 18px;
       font-weight: 500;
       margin: auto 20px auto 20px;
+      a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+        color: darkslategrey;
+      }
       p {
         margin-right: 10px;
       }

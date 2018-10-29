@@ -30,7 +30,6 @@ export default class extends Component {
     justify-content: center;
     margin: 0 auto;
     `
-    console.log(productsList.results)
       return (
       <Layout>
         <CoverAllPages className="CoverAllPages" />

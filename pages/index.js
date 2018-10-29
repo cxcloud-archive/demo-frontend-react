@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import Header from '../components/Header'
 import Features from '../components/Features'
 import Cover from '../components/Cover'
+import Ads from '../components/Ads'
 import _ from 'lodash';
 
 
@@ -26,7 +27,7 @@ export default class extends React.Component {
         <Cover />
         <CategoriesList categories={categories} />
         <Features />
-        <FindPlan />
+        <Ads />
       </Layout>
     );
   }

@@ -7,18 +7,42 @@ export default class extends Component {
 
   render() {
     const Wrapper = styled.div`
-  
+
     @media only screen and (max-width: 480px) {
       display: flex;
       flex-direction: column;
     }
-    background-image: url('https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7ef79a01f0a12450049b7d20cd10f93c&auto=format&fit=crop&w=1267&q=80');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 50em;
-  width: 100%;
+    background-image: url("https://www.zastavki.com/pictures/originals/2013/Girls___Beautyful_Girls___Girl_on_white_background_041541_.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: 140px;
+    height: 50em;
+    width: 100%;
+    div {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 370px;
+      left: 500px;
+
+      h2 {
+        font-size: 36px;
+        margin: 0;
+      }
+      h1 {
+        margin: 0;
+        font-size: 50px;
+        text-transform: uppercase;
+      }
+    }
   `
-    return(<Wrapper></Wrapper>)
+    return(
+    <Wrapper>
+      <div>
+      <h2>Welcome to</h2>
+      <h1>CX-Coud E-shop</h1>
+      </div>
+    </Wrapper>)
   }
 }

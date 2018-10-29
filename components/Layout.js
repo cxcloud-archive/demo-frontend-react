@@ -4,9 +4,10 @@ import Footer from '../components/Footer';
 import styled from 'styled-components'
 
 export default ({children}) => {
-  const global = styled.div`
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #4a4a4a;`;
+  const Wrapper = styled.div`
+    font-family: Helvetica, Geneva, Tahoma, sans-serif;
+    color: darkslategrey;
+    `
   const button = styled.button`
     background-color: #f1ca5a;
     padding: 8px 30px 8px 30px;
@@ -21,9 +22,6 @@ export default ({children}) => {
       text-decoration: none;
     }`
 
-    const Wrapper = styled.div`
-      color: darkslategrey;
-    `;
 
   return(
     <div>
