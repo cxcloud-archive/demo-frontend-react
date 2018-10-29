@@ -56,17 +56,17 @@ export default class extends Component {
     <Wrapper>
       <ul>
         <li>
-          <Link href={{ pathname: '/', query: { name: 'home' } }}>
+          <Link href={{ pathname: '/' }}>
             <a><p>Home</p><FontAwesomeIcon icon={faAngleDown} /></a>
           </Link>
         </li>
         <li>
-          <Link href={{ pathname: '/CategoryPage', query: { name: 'categories' } }}>
+          <Link href={{ pathname: '/CategoryPage' }}>
             <a><p>Categories</p><FontAwesomeIcon icon={faAngleDown} /></a>
           </Link>
         </li>
         <li>
-          <Link href={{ pathname: '/About', query: { name: 'about' } }}>
+          <Link href={{ pathname: '/About' }}>
             <a><p>About</p><FontAwesomeIcon icon={faAngleDown} /></a>
           </Link>
         </li>

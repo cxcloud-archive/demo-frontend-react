@@ -1,8 +1,26 @@
-import React from 'react'
-import Link from 'next/link'
+import React, { Component } from 'react';
 
-export default ({ url: id   }) => (
-  <p>Welcome to About! {id}</p>
-)
+export default class extends Component {
+  static async getInitialProps({ query, req }) {
 
+  }
 
+  render() {
+    const { name } = this.props;
+
+    return(
+      <div className="page-title">
+        <h1>Welcome to {name}!</h1>
+        <style jsx>
+            {`
+                .page-title h1 {
+                    color: black;
+                    font-size: 24px;
+                    text-align: center;
+                }
+            `}
+        </style>
+      </div>
+    )
+  }
+}

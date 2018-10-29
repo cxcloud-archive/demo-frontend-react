@@ -1,32 +1,24 @@
-import React, { Component } from 'react'
-import Link from 'next/link'
-import Util from '../common/Util'
-import CategoriesList from '../components/CategoriesList'
-import styled from 'styled-components'
-import Layout from '../components/Layout'
-import CoverAllPages from '../common/CoverAllPages'
-import ProductDetails from '../components/ProductDetails'
-import FindPlan from '../components/FindPlan'
-import CategoryCard from '../components/CategoryCard'
-import _ from 'lodash'
-import './index'
+import React, { Component } from 'react';
+import Util from '../common/Util';
+import styled from 'styled-components';
+import Layout from '../components/Layout';
+import CoverAllPages from '../common/CoverAllPages';
+import _ from 'lodash';
+import './index';
 import ProductsCard from '../components/ProductsCard';
-import Title from '../components/Title'
-
+import Title from '../components/Title';
 
 export default class extends Component {
-
   static async getInitialProps({ query, req }) {
     const productId = _.get(query, 'id');
     const productsList = await Util.fetchProducts(productId);
+    const categoryName = _.get(query, 'name');
 
-    const categoryId = _.get(query, 'id');
-    const categories = await Util.fetchCategories(categoryId);
-
-    return { productsList, categories };
+    return { productsList, categoryName };
   }
+
   render() {
-    const { productsList, categories } = this.props;
+    const { productsList, categoryName } = this.props;
 
     const SelectedCategory = styled.div`
     display: flex;
@@ -37,11 +29,10 @@ export default class extends Component {
     `
     console.log(productsList)
 
-
-      return (
+    return (
       <Layout>
         <CoverAllPages className="CoverAllPages" />
-        <Title />
+        <Title name={categoryName}/>
         {/* {
             categories.map((item, i) => (
               <h1>{item.name.en}</h1>

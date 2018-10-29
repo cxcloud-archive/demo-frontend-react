@@ -64,7 +64,7 @@ export default ({ id, name }) => {
   `;
     return (
       <Wrapper>
-        <Link href={`/CategoryPage?id=${id}`}>
+        <Link href={`/CategoryPage?name=${name}&id=${id}`}>
           <div>
             <a>
               {name}

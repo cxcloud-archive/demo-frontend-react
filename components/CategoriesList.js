@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import CategoryCard from './CategoryCard';
 import Util from '../common/Util';
-import ProductsCard from '../components/ProductsCard'
-import styled from 'styled-components'
-import Categories from '../pages/CategoryPage'
+import styled from 'styled-components';
 
 export default class extends Component {
   state = {
     categories: [],
     productsList: [],
     show: true
-  }
+  };
+
   async componentDidMount() {
     const cats = await Util.fetchCategories();
     const prods = await Util.fetchProducts(cats[0].id);
@@ -21,12 +20,14 @@ export default class extends Component {
       }
     );
   }
+  
   onClickCategory = (e, categoryId) => {
     e.preventDefault()
     Util.fetchProducts(categoryId).then(list => {
       this.setState({ productsList: list.results });
     });
   }
+
   showProductsList = (e) => {
     e.preventDefault()
     this.setState({ show: false})
