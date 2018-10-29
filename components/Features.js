@@ -37,7 +37,7 @@ export default class extends Component {
           text-align: center;
           font-size: 16px;
           font-weight: 600;
-        color: darkslategrey;
+          color: darkslategrey;
         }
       }`;
     return <Wrapper>

@@ -9,7 +9,6 @@ import Cover from '../components/Cover'
 import Ads from '../components/Ads'
 import _ from 'lodash';
 
-
 export default class extends React.Component {
   static async getInitialProps({ query, req }) {
     const productId = _.get(query, 'id');

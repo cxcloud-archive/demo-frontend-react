@@ -88,26 +88,25 @@ export default class extends Component {
         cursor: pointer;
         color: rgba(245,245,245,);
       }
-      
-      }
-    `
-    const SelectedCategory = styled.div`
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 100em;
-      margin: 0 auto;
-      justify-content: center;
-      `
-console.log(categories)
-return <Wrapper>
-        <ListOfCategories>
-          {categories.map((category, i) => (
-            <CategoryCard
-            key={i}
-            id={category.id}
-            name={category.name.en} />
-          ))}
-        </ListOfCategories>
-      </Wrapper>;
+    }
+  `
+  const SelectedCategory = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100em;
+    margin: 0 auto;
+    justify-content: center;
+  `
+    console.log(categories)
+    return <Wrapper>
+      <ListOfCategories>
+        {categories.map((category, i) => (
+          <CategoryCard
+          key={i}
+          id={category.id}
+          name={category.name.en} />
+        ))}
+      </ListOfCategories>
+    </Wrapper>;
   }
 }

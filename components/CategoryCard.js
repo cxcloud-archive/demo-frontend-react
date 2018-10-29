@@ -5,7 +5,6 @@ import styled from 'styled-components'
 
 export default ({ id, name }) => {
 
-
   const Wrapper = styled.div`
     color: darkslategrey;
     color: darkslategrey;
@@ -19,12 +18,10 @@ export default ({ id, name }) => {
     cursor: pointer;
     background-color: whitesmoke;
     div {
-      //border: 1px solid black;
       padding: 20px;
       font-size: 16px;
       text-transform: uppercase;
-      background-color: white;
-
+      background-color: rgba(255,255,255, 0.9);
     }
     :first-child {
       background-image: url(http://www.pngmart.com/files/3/Beautiful-Girl-Transparent-Background.png);
@@ -60,11 +57,9 @@ export default ({ id, name }) => {
       }
       :nth-child(6) {
         background-image: url(http://www.pngmart.com/files/5/Purse-PNG-File.png);
-        background-position-x: -28px;
         background-repeat: no-repeat;
         background-size: cover;
       }
-
 }
   `;
     return (
