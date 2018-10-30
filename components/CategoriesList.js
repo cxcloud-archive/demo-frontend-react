@@ -44,32 +44,31 @@ export default class extends Component {
           padding: 0px 20px 0px 20px;
         }
       }
-    `;
+    `
     const ListOfCategories = styled.div`
-        margin: 0px auto 2em auto;
-        max-width: 100em;
-        padding-bottom: 5em;
-        border-bottom: 2px solid #f3f3f3;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        :active {
-          color: rgba(211, 183, 86, 1);
-        }
-        :focus {
-          color: red;
-        }
-        :target {
-          color: red;
-        }
-        :nth-child(2n) {
-          flex-grow: 1;
-        }
-
+      margin: 0px auto 2em auto;
+      max-width: 100em;
+      padding-bottom: 5em;
+      border-bottom: 2px solid #f3f3f3;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      :active {
+        color: rgba(211, 183, 86, 1);
       }
-      @media only screen and (max-width: 1600px) {
-        max-width: 65em;`;
+      :focus {
+        color: red;
+      }
+      :target {
+        color: red;
+      }
+      :nth-child(2n) {
+        flex-grow: 1;
+      }
+    @media only screen and (max-width: 1600px) {
+      max-width: 65em;
+    `;
     const CategoryName = styled.div`
       background-position: center;
       background-repeat: no-repeat;
@@ -92,26 +91,27 @@ export default class extends Component {
         :hover {
         cursor: pointer;
         color: rgba(245,245,245,);
+        }
       }
-    }
-  `
-  const SelectedCategory = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100em;
-    margin: 0 auto;
-    justify-content: center;
-  `
-    console.log(categories)
-    return <Wrapper>
-      <ListOfCategories>
-        {categories.map((category, i) => (
-          <CategoryCard
-          key={i}
-          id={category.id}
-          name={category.name.en} />
-        ))}
-      </ListOfCategories>
-    </Wrapper>;
+    `
+    const SelectedCategory = styled.div`
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100em;
+      margin: 0 auto;
+      justify-content: center;
+    `
+    return(
+      <Wrapper>
+        <ListOfCategories>
+          {categories.map((category, i) => (
+            <CategoryCard
+            key={i}
+            id={category.id}
+            name={category.name.en} />
+          ))}
+        </ListOfCategories>
+      </Wrapper>
+    );
   }
 }

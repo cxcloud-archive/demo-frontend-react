@@ -24,53 +24,52 @@ export default ({ id, name }) => {
     }
     :first-child {
       background-image: url(http://www.pngmart.com/files/3/Beautiful-Girl-Transparent-Background.png);
-        background-repeat: no-repeat;
-        background-position-x: -32px;
-        background-size: cover;
-      }
-      :nth-child(2) {
-        background-image: url(http://www.pngmart.com/files/1/Women-Bag-Transparent-Background.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      :nth-child(3) {
-        background-image: url(http://www.pngmart.com/files/3/Branded-Watch-PNG-Pic.png);
-
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      :nth-child(4) {
-        background-image: url(http://www.pngmart.com/files/3/Sunglasses-PNG-Transparent-Image.png);
-        background-position-y: 28px;
-        background-position-x: -8px;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      :nth-child(5) {
-        background-image: url(http://www.pngmart.com/files/7/Guy-Transparent-Images-PNG.png);
-        background-position-y: 10px;
-        background-position-x: 62px;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      :nth-child(6) {
-        background-image: url(http://www.pngmart.com/files/5/Purse-PNG-File.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-}
-  `;
-    return (
-      <Wrapper>
-        <Link href={`/CategoryPage?name=${name}&id=${id}`}>
-          <div>
-            <a>
-              {name}
-            </a>
-          </div>
-        </Link>
-
-      </Wrapper>
-    );
+      background-repeat: no-repeat;
+      background-position-x: -32px;
+      background-size: cover;
+    }
+    :nth-child(2) {
+      background-image: url(http://www.pngmart.com/files/1/Women-Bag-Transparent-Background.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    :nth-child(3) {
+      background-image: url(http://www.pngmart.com/files/3/Branded-Watch-PNG-Pic.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    :nth-child(4) {
+      background-image: url(http://www.pngmart.com/files/3/Sunglasses-PNG-Transparent-Image.png);
+      background-position-y: 28px;
+      background-position-x: -8px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    :nth-child(5) {
+      background-image: url(http://www.pngmart.com/files/7/Guy-Transparent-Images-PNG.png);
+      background-position-y: 10px;
+      background-position-x: 62px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    :nth-child(6) {
+      background-image: url(http://www.pngmart.com/files/5/Purse-PNG-File.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
+  `
+  return (
+    <Wrapper>
+      <Link href={`/CategoryPage?name=${name}&id=${id}`}>
+        <div>
+          <a>
+            {name}
+          </a>
+        </div>
+      </Link>
+
+    </Wrapper>
+  );
+}

@@ -1713,78 +1713,78 @@ function (_Document) {
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("html", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 10
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_document__["Head"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 11
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("meta", {
         name: "viewport",
         content: "initial-scale=1.0, width=device-width",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 12
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("style", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 13
         }
       }, "body { margin: 0 } /* custom! */"), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("script", {
         src: "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js",
         defer: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 14
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("script", {
         src: "https://cdn.timekit.io/booking-js/v2/booking.min.js",
         defer: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 15
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("script", {
         src: "http://fullcalendar.io/js/fullcalendar-2.1.1/lib/jquery.min.js",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 16
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("script", {
         src: "http://fullcalendar.io/js/fullcalendar-2.1.1/lib/moment.min.js",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 17
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("script", {
         src: "http://fullcalendar.io/js/fullcalendar-2.1.1/lib/jquery-ui.custom.min.js",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 18
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("script", {
         src: "http://fullcalendar.io/js/fullcalendar-2.1.1/fullcalendar.min.js",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 19
         }
       })), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("body", {
         className: "custom_class",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 21
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_document__["Main"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 22
         }
       }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_document__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 23
         }
       })));
     }

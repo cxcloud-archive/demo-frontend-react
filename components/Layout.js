@@ -8,7 +8,7 @@ export default ({children}) => {
     margin: 0 auto;
     font-family: Helvetica, Geneva, Tahoma, sans-serif;
     color: darkslategrey;
-    `
+  `
   const button = styled.button`
     background-color: #f1ca5a;
     padding: 8px 30px 8px 30px;
@@ -21,16 +21,13 @@ export default ({children}) => {
     a {
       color: white;
       text-decoration: none;
-    }`
-
-
+    }
+  `
   return(
-    <div>
-        <Wrapper>
-            <Header global />
-            <main className="main">{children}</main>
-            <Footer />
-        </Wrapper>
-    </div>
-);
+    <Wrapper>
+        <Header global />
+        <main className="main">{children}</main>
+        <Footer />
+    </Wrapper>
+  );
 }

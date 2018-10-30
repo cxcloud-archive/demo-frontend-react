@@ -1,18 +1,16 @@
-import React from 'react';
-import CategoriesList from '../components/CategoriesList';
-import Util from '../common/Util';
-import Layout from '../components/Layout';
+import React from 'react'
+import CategoriesList from '../components/CategoriesList'
+import Util from '../common/Util'
+import Layout from '../components/Layout'
 import Features from '../components/Features'
 import Cover from '../components/Cover'
-import Ads from '../components/Ads'
-import _ from 'lodash';
+import _ from 'lodash'
 
 export default class extends React.Component {
   static async getInitialProps({ query, req }) {
     const categories = await Util.fetchCategories();
     return { categories };
   }
-
   render() {
     const { categories } = this.props;
     return (

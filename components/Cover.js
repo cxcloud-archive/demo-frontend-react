@@ -7,7 +7,6 @@ export default class extends Component {
 
   render() {
     const Wrapper = styled.div`
-
     @media only screen and (max-width: 480px) {
       display: flex;
       flex-direction: column;
@@ -24,7 +23,6 @@ export default class extends Component {
       position: absolute;
       top: 50%;
       left: 16%;
-
       h2 {
         font-size: 36px;
         margin: 0;
@@ -36,12 +34,13 @@ export default class extends Component {
       }
     }
   `
-    return(
+  return(
     <Wrapper>
       <div>
       <h2>Welcome to</h2>
       <h1>CX-Coud E-shop</h1>
       </div>
-    </Wrapper>)
+    </Wrapper>
+    )
   }
 }

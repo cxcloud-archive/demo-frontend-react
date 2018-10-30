@@ -3,9 +3,7 @@ import styled from 'styled-components'
 
 export default class extends Component {
   static async getInitialProps({ query, req }) {
-
   }
-
   render() {
     const { name } = this.props;
     const Wrapper = styled.div`

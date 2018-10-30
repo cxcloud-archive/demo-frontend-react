@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faHandSpock, faShippingFast, faHeart } from '@fortawesome/fontawesome-free-solid'
@@ -20,7 +20,7 @@ export default class extends Component {
       div {
         display: inline-flex;
         margin-top: 20px;
-      `;
+      `
     const Feature = styled.div`
       display: flex;
       flex-direction: column;
@@ -43,44 +43,47 @@ export default class extends Component {
         .heart {
           margin-top: 28px;
           }
-      }`;
-    return <Wrapper>
-        <h1>Amazing Features</h1>
-        <div>
-          <Feature>
-            <div className="icon">
-            <FontAwesomeIcon icon={faShippingFast} size="4x" color="rgba(47,79,79, 0.6)" />
-            </div>
-            <h1>Free shipping</h1>
-            <p>
-              Get free shipping on all orders over €100! and free returns to
-              our Finnish return centre! Items are dispatched from the US
-              and will arrive in 5-8 days.
-            </p>
-          </Feature>
-          <Feature>
-            <div className="icon">
-            <FontAwesomeIcon icon={faHandSpock} size="4x" color="rgba(47,79,79, 0.6)" />
-            </div>
-            <h1>Amazing customer service</h1>
-            <p>
-              Get Free Shipping on all orders over €100 and and free returns
-              to our Finnish return centre. Items are dispatched from the US
-              and will arrive in 5-8 days.
-            </p>
-          </Feature>
-          <Feature>
-            <div className="icon">
-            <FontAwesomeIcon icon={faHeart} size="4x" color="rgba(47,79,79, 0.6)" />
-            </div>
-            <h1 className="heart">No custom or duty fees!</h1>
-            <p>
-              We pay these fees so you don't have to! The total billed at
-              checkout is rthe final amount you pay, inclusive of VAT, with
-              no additional charges at hte time of delivery!
-            </p>
-          </Feature>
-        </div>
-      </Wrapper>;
+        }
+      `
+      return(
+        <Wrapper>
+          <h1>Amazing Features</h1>
+          <div>
+            <Feature>
+              <div className="icon">
+              <FontAwesomeIcon icon={faShippingFast} size="4x" color="rgba(47,79,79, 0.6)" />
+              </div>
+              <h1>Free shipping</h1>
+              <p>
+                Get free shipping on all orders over €100! and free returns to
+                our Finnish return centre! Items are dispatched from the US
+                and will arrive in 5-8 days.
+              </p>
+            </Feature>
+            <Feature>
+              <div className="icon">
+              <FontAwesomeIcon icon={faHandSpock} size="4x" color="rgba(47,79,79, 0.6)" />
+              </div>
+              <h1>Amazing customer service</h1>
+              <p>
+                Get Free Shipping on all orders over €100 and and free returns
+                to our Finnish return centre. Items are dispatched from the US
+                and will arrive in 5-8 days.
+              </p>
+            </Feature>
+            <Feature>
+              <div className="icon">
+              <FontAwesomeIcon icon={faHeart} size="4x" color="rgba(47,79,79, 0.6)" />
+              </div>
+              <h1 className="heart">No custom or duty fees!</h1>
+              <p>
+                We pay these fees so you don't have to! The total billed at
+                checkout is rthe final amount you pay, inclusive of VAT, with
+                no additional charges at hte time of delivery!
+              </p>
+            </Feature>
+          </div>
+      </Wrapper>
+    );
   }
 }

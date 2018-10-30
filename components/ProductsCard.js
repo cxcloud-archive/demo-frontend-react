@@ -13,11 +13,8 @@ export default ({ id, name, image, description, price, currency, title }) => {
     min-height: 24em;
     margin: 20px;
     width: 100%;
-
     font-weight: bold;
     box-shadow: inset 0px 0px 13px -5px darkslategrey;
-    // box-shadow: 2px 2px rgba(211, 183, 86, 0.6);
-    // border: 1px solid #d3b756;
     border-radius: 3px;
     a {
       width: 100%;
@@ -36,7 +33,8 @@ export default ({ id, name, image, description, price, currency, title }) => {
     }
     a:visited {
       color: darkslategrey;
-    }`;
+    }
+  `
   const Title = styled.h1`
     font-weight: bold;
     font-size: 20px;
@@ -47,20 +45,22 @@ export default ({ id, name, image, description, price, currency, title }) => {
   `
   const priceInEuro = (price / 100).toFixed(2);
 
-  return <Wrapper>
+  return(
+    <Wrapper>
       <Link href={`/ProductPage?id=${id}`}>
         <a>
-            <div>
-              <img src={image} width="180" height="240" alt="" />
-            </div>
-            <div className="description">
-              <Title>{name}</Title>
-              <p>{description}</p>
-              <Price>
-                {priceInEuro} {currency}
-              </Price>
-            </div>
+          <div>
+            <img src={image} width="180" height="240" alt="" />
+          </div>
+          <div className="description">
+            <Title>{name}</Title>
+            <p>{description}</p>
+            <Price>
+              {priceInEuro} {currency}
+            </Price>
+          </div>
         </a>
       </Link>
-    </Wrapper>;
-};
+    </Wrapper>
+  );
+}
