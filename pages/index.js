@@ -12,7 +12,7 @@ export default class extends React.Component {
     const categories = await Util.fetchCategories();
     return { categories };
   }
-  
+
   render() {
     const { categories } = this.props;
     return (
@@ -20,7 +20,6 @@ export default class extends React.Component {
         <Cover />
         <CategoriesList categories={categories} />
         <Features />
-        <Ads />
       </Layout>
     );
   }

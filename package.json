@@ -19,9 +19,10 @@
     "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
     "@fortawesome/react-fontawesome": "0.1.0-11",
     "babel-plugin-styled-components": "^1.8.0",
-    "css-loader": "^1.0.0",
+    "css-loader": "^1.0.1",
     "css-modules-require-hook": "^4.2.3",
     "es6-promise": "^4.2.4",
+    "file-loader": "^2.0.0",
     "font-awesome": "^4.7.0",
     "i": "^0.3.6",
     "isomorphic-fetch": "^2.2.1",
@@ -36,6 +37,8 @@
     "react-fontawesome": "^1.6.1",
     "react-tabs": "^2.2.2",
     "react-update": "^0.4.4",
-    "styled-components": "^4.0.2"
+    "style-loader": "^0.23.1",
+    "styled-components": "^4.0.2",
+    "url-loader": "^1.1.2"
   }
 }

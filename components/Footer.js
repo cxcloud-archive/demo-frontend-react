@@ -1,73 +1,69 @@
 import React from 'react';
 import Link from 'next/link'
+import styled from 'styled-components'
 
 export default () => {
-    return (
-        <div className="Footer">
-            <div>
-                <div>
-                    <p className="copyright">&copy; 2018 Tieto</p>
-                </div>
-                <div className="footer-menu">
-                    <Link href={{ pathname: '/About', query: { name: 'about' } }}>
-                        <a>About</a>
-                    </Link>
-                    <Link href={{ pathname: '/Contact', query: { name: 'contact'}}}>
-                        <a>Contact us</a>
-                    </Link>
-                    <Link href={{ pathname: '/Sitemap', query: { name: 'sitemap'}}}>
-                        <a>Site Map</a>
-                    </Link>
-                    <Link href={{ pathname: '/Careers', query: { name: 'careers'}}}>
-                        <a>Careers</a>
-                    </Link>
-                    <Link href={{ pathname: '/Terms', query: { name: 'terms'}}}>
-                        <a>Terms and Conditions</a>
-                    </Link>
-                    <Link href={{ pathname: '/Privacy', query: { name: 'privacy'}}}>
-                        <a>Privacy Policy</a>
-                    </Link>
-                    <Link href={{ pathname: '/Ads', query: { name: 'ads'}}}>
-                        <a>About Our Ads</a>
-                    </Link>
-                    <Link href={{ pathname: '/Stores', query: { name: 'stores'}}}>
-                        <a>Store Locator</a>
-                    </Link>
-                </div>
-            </div>
-            <style jsx>
-                {`
-                    .Footer {
-                        background-color: #4a4a4a;
-                        color: whitesmoke;
-                        padding: 30px;
-                        display: grid;
-                    }
-                    .footer-menu {
-                        width: 100%;
-                        display: grid;
-                        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-                        text-align: center;
-                    }
-                    .footer-menu > p {
-                        text-align: center;
-                        font-size: 14px;
-                        font-weight: 100;
-                        color: white;
-                    }
-                    .footer-menu a {
-                        color: white;
-                        margin-bottom: 10px;
-                        text-decoration: none;
-                    }
-                    .copyright {
-                        font-size: 18px;
-                        font-weight: 200;
-                        color: #e7e7e7;   
-                        margin-left: 20px;
-                    }
-                `}
-            </style>
-        </div>
+  const Wrapper = styled.div`
+    width: 100%;
+    color: darkslategrey;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    hr {
+      border-top: 2px solid #f3f3f3;;
+      border-left-color: transparent;
+      height: 6px;
+      border-right-color: transparent;
+      border-bottom: 2px solid #f3f3f3;;
+      width: 74%;
+    }
+    div {
+      width: 100%;
+      .copyright {
+      font-size: 18px;
+      font-weight: 200;
+      color: darkslategrey;
+
+    }
+    .copyright {
+      margin-top: 50px;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+  `
+  const Navbar = styled.div`
+    margin: 30px auto 0 auto;
+      text-align: center;
+      a {
+        font-weight: 500;
+        color: darkslategrey;
+        margin: auto 50px 10px 50px;
+        text-decoration: none;
+      }
+  `
+
+  return (
+        <Wrapper>
+          <hr />
+          <Navbar>
+              <Link href={{ pathname: '/About', query: { name: 'about' } }}>
+                  <a className="footer-link">About</a>
+              </Link>
+              <Link href={{ pathname: '/Contact', query: { name: 'contact'}}}>
+                <a className="footer-link">Contact us</a>
+              </Link>
+              <Link href={{ pathname: '/Privacy', query: { name: 'privacy'}}}>
+                <a className="footer-link">Privacy Policy</a>
+              </Link>
+              <Link href={{ pathname: '/Stores', query: { name: 'stores'}}}>
+                <a className="footer-link">Store Locator</a>
+              </Link>
+          </Navbar>
+      <div>
+        <p className="copyright">&copy; 2018 Tieto</p>
+      </div>
+        </Wrapper>
     );
 }

@@ -4,19 +4,20 @@ import Util from '../common/Util'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faHandSpock, faShippingFast, faHeart, faAngleDown } from '@fortawesome/fontawesome-free-solid'
+//import logo from '../static/images/cx-cloud-logo.png';
 
 export default class extends Component {
   render() {
 
   const Wrapper = styled.div`
-
-    top: 2em;
-    right:20em;
-    position: absolute;
-    display: flex;
+    margin: 20px;
     flex-direction: row;
     list-style: none;
+    display: flex;
+    width: contain;
+    justify-content: space-between;
     ul {
+      padding-right: 40px;
       display: flex;
       li {
       display: flex;
@@ -38,22 +39,16 @@ export default class extends Component {
     }
   }
   `
-  const Logo = styled.div`
-    flex: auto 1 1;
-    justify-content: flex-start;
+  const Logo = styled.img`
     display: flex;
-    margin: auto 10px auto 10px;
-    img {
-      height: auto;
-      margin-left: 30px;
-      @media only screen and (max-width: 480px) {
-        margin-left: 0;
-      }
-    }
+    justify-content: flex-start;
   `
 
   return(
     <Wrapper>
+      {/* <img src={logo} /> */}
+      {/* <Logo /> */}
+      <Logo src="../static/images/cx-cloud-logo.png" />
       <ul>
         <li>
           <Link href={{ pathname: '/' }}>

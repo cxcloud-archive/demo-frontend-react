@@ -15,7 +15,6 @@ export default class extends Component {
     background-image: url("https://www.zastavki.com/pictures/originals/2013/Girls___Beautyful_Girls___Girl_on_white_background_041541_.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
     background-position-y: 140px;
     height: 50em;
     width: 100%;
@@ -23,8 +22,8 @@ export default class extends Component {
       display: flex;
       flex-direction: column;
       position: absolute;
-      top: 370px;
-      left: 500px;
+      top: 50%;
+      left: 16%;
 
       h2 {
         font-size: 36px;

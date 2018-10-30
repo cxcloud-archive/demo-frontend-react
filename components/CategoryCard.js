@@ -7,8 +7,7 @@ export default ({ id, name }) => {
 
   const Wrapper = styled.div`
     color: darkslategrey;
-    color: darkslategrey;
-    margin: auto 20px auto 20px;
+    margin: 40px 20px auto 20px;
     width: 14em;
     border-color: transparent;
     height: 10em;

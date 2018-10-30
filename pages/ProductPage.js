@@ -21,7 +21,7 @@ export default class extends Component {
 
     return(
       <Layout>
-          <CoverAllPages className="CoverAllPages" />
+          {/* <CoverAllPages className="CoverAllPages" /> */}
           <ProductDetails
             id={product.id}
             name={product.name.en}
@@ -31,7 +31,7 @@ export default class extends Component {
             sku={product.masterVariant.sku}
             priceInEuro={priceInEuro}
             currency={product.masterVariant.prices[0].value.currencyCode} />
-          <FindPlan />
+          {/* <FindPlan /> */}
     </Layout>
     );
   }

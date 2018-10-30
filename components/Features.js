@@ -14,7 +14,7 @@ export default class extends Component {
       margin: 0 auto;
       h1 {
         font-size: 20px;
-        color: #d3b756;
+        color: darkslategrey;
         text-transform: uppercase;
       }
       div {
@@ -29,8 +29,9 @@ export default class extends Component {
       line-height: 28px;
       color: darkslategrey;
         .icon {
-          margin: 0 auto;
+          margin: 10px auto 10px auto;
           margin-bottom: 20px;
+          justify-content: center;
         }
         h1 {
           margin: 0;
@@ -39,13 +40,16 @@ export default class extends Component {
           font-weight: 600;
           color: darkslategrey;
         }
+        .heart {
+          margin-top: 28px;
+          }
       }`;
     return <Wrapper>
         <h1>Amazing Features</h1>
         <div>
           <Feature>
             <div className="icon">
-              <FontAwesomeIcon icon={faShippingFast} size="4x" color="rgba(241, 202, 90, 0.7)" />
+            <FontAwesomeIcon icon={faShippingFast} size="4x" color="rgba(47,79,79, 0.6)" />
             </div>
             <h1>Free shipping</h1>
             <p>
@@ -56,7 +60,7 @@ export default class extends Component {
           </Feature>
           <Feature>
             <div className="icon">
-              <FontAwesomeIcon icon={faHandSpock} size="4x" color="rgba(241, 202, 90, 0.7)" />
+            <FontAwesomeIcon icon={faHandSpock} size="4x" color="rgba(47,79,79, 0.6)" />
             </div>
             <h1>Amazing customer service</h1>
             <p>
@@ -67,9 +71,9 @@ export default class extends Component {
           </Feature>
           <Feature>
             <div className="icon">
-              <FontAwesomeIcon icon={faHeart} size="4x" color="rgba(241, 202, 90, 0.7)" />
+            <FontAwesomeIcon icon={faHeart} size="4x" color="rgba(47,79,79, 0.6)" />
             </div>
-            <h1>No custom or duty fees!</h1>
+            <h1 className="heart">No custom or duty fees!</h1>
             <p>
               We pay these fees so you don't have to! The total billed at
               checkout is rthe final amount you pay, inclusive of VAT, with

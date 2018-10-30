@@ -5,22 +5,31 @@ import Link from 'next/link'
 export default ({ id, name, image, description, price, currency, title }) => {
   const Wrapper = styled.div`
     display: flex;
+    align-items: flex-end;
     justify-content: left;
     margin: 20px 0px 20px 0px;
-    padding: 30px 20px 10px 30px;
+    padding: 20px 30px 20px 30px;
     max-width: 16em;
     min-height: 24em;
     margin: 20px;
     width: 100%;
-    box-shadow: 2px 2px rgba(211, 183, 86, 0.6);
-    border: 1px solid #d3b756;
+
+    font-weight: bold;
+    box-shadow: inset 0px 0px 13px -5px darkslategrey;
+    // box-shadow: 2px 2px rgba(211, 183, 86, 0.6);
+    // border: 1px solid #d3b756;
     border-radius: 3px;
     a {
+      width: 100%;
       text-decoration: none;
       color: darkslategrey;
       font-size: 14px;
       font-weight: 500;
       text-transform: capitalize;
+      .description {
+        display: flex;
+        flex-direction: column;
+      }
     }
     a:hover {
       color: #3a4048;
@@ -34,7 +43,7 @@ export default ({ id, name, image, description, price, currency, title }) => {
   `
   const Price = styled.p`
     padding-top: 10px;
-    border-top: 1px solid gray;
+    border-top: 2px solid rgba(204, 204, 204, 0.4);
   `
   const priceInEuro = (price / 100).toFixed(2);
 
@@ -44,7 +53,7 @@ export default ({ id, name, image, description, price, currency, title }) => {
             <div>
               <img src={image} width="180" height="240" alt="" />
             </div>
-            <div>
+            <div className="description">
               <Title>{name}</Title>
               <p>{description}</p>
               <Price>

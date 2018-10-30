@@ -27,36 +27,33 @@ export default class extends Component {
     justify-content: center;
     margin: 0 auto;
     `
-    console.log(productsList)
+    const Wrapper = styled.div`
 
+    `
     return (
       <Layout>
-        <CoverAllPages className="CoverAllPages" />
+        {/* <CoverAllPages className="CoverAllPages" /> */}
+        <Wrapper>
         <Title name={categoryName}/>
-        {/* {
-            categories.map((item, i) => (
-              <h1>{item.name.en}</h1>
-            ))
-        } */}
-          <SelectedCategory className="selected_category">
-            {productsList !== undefined &&
-              !(Object.keys(productsList).length === 0) ? (
-                productsList.results.map((item, i) => (
-                  <ProductsCard
-                    key={i}
-                    id={item.id}
-                    name={item.name.en}
-                    image={item.masterVariant.images[0].url}
-                    description={item.slug.en}
-                    price={item.masterVariant.prices[0].value.centAmount}
-                    currency={item.masterVariant.prices[0].value.currencyCode}
-                  />
-                ))
-              ) : (
-                <p>No Products To Show</p>
-              )}
-          </SelectedCategory>
-
+        <SelectedCategory className="selected_category">
+          {productsList !== undefined &&
+            !(Object.keys(productsList).length === 0) ? (
+              productsList.results.map((item, i) => (
+                <ProductsCard
+                  key={i}
+                  id={item.id}
+                  name={item.name.en}
+                  image={item.masterVariant.images[0].url}
+                  description={item.slug.en}
+                  price={item.masterVariant.prices[0].value.centAmount}
+                  currency={item.masterVariant.prices[0].value.currencyCode}
+                />
+              ))
+            ) : (
+              <p>No Products To Show</p>
+            )}
+        </SelectedCategory>
+    </Wrapper>
       </Layout>
     )
 

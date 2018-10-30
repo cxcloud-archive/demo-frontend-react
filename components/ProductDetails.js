@@ -16,7 +16,7 @@ export default ({
 }) => {
 
 const Wrapper = styled.div`
-  margin: 0 auto;
+  margin: 10em auto auto auto;
   display: flex;
   justify-content: center;
   padding: 20px 40px 20px 40px;
@@ -27,6 +27,9 @@ const ProductContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  .price {
+    font-weight: bold;
+  }
   @media only screen and (max-width: 580px) {
     display: flex;
     flex-direction: column;
@@ -45,7 +48,7 @@ const ProductInfo = styled.div`
   h1 {
     font-weight: bold;
     font-size: 28px;
-    color: #d3b756;
+    color: darkslategray;
   }
 `;
 const Rating = styled.div`
@@ -54,7 +57,7 @@ const Rating = styled.div`
   p {
     margin-left: 15px;
     a {
-      color: #000000;
+      color: lightgray;
       :visited {
         color: #000000;
       }
@@ -65,17 +68,20 @@ const Cart = styled.div`
   button {
     padding: 15px 20px 15px 20px;
     border-radius: 2px;
-    border-color: #f1ca5a;
+
     background-color: #fff;
     color: #d3b756
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
-    & :hover {
-      border-color: #d3b756;
-      background-color: #d3b756;
-      color: whitesmoke;
+    box-shadow: inset 0px 0px 8px -3px darkslategrey;
+    :hover {
+      border-color: transparent;
+      background-color: rgba(89, 85, 85, 0.1);
+      color: darkslategrey;
     }
+}
+
   }
 `;
   return(
@@ -101,7 +107,7 @@ const Cart = styled.div`
           </Rating>
           <p>Color: {color}</p>
           <p>Size: {size}</p>
-          <p>€ {priceInEuro}</p>
+          <p className="price">€ {priceInEuro}</p>
           <Cart>
             <button>Add to cart</button>
           </Cart>

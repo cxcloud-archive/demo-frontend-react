@@ -20,7 +20,7 @@ export default class extends Component {
       }
     );
   }
-  
+
   onClickCategory = (e, categoryId) => {
     e.preventDefault()
     Util.fetchProducts(categoryId).then(list => {
@@ -49,7 +49,7 @@ export default class extends Component {
         margin: 0px auto 2em auto;
         max-width: 100em;
         padding-bottom: 5em;
-        border-bottom: 1px solid rgba(211, 183, 86, 1);
+        border-bottom: 2px solid #f3f3f3;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -65,7 +65,11 @@ export default class extends Component {
         }
         :nth-child(2n) {
           flex-grow: 1;
-        }`;
+        }
+
+      }
+      @media only screen and (max-width: 1600px) {
+        max-width: 65em;`;
     const CategoryName = styled.div`
       background-position: center;
       background-repeat: no-repeat;

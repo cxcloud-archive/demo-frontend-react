@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components'
 
 export default class extends Component {
   static async getInitialProps({ query, req }) {
@@ -7,20 +8,22 @@ export default class extends Component {
 
   render() {
     const { name } = this.props;
-
-    return(
-      <div className="page-title">
-        <h1>Welcome to {name}!</h1>
-        <style jsx>
-            {`
-                .page-title h1 {
-                    color: black;
-                    font-size: 24px;
-                    text-align: center;
-                }
-            `}
-        </style>
-      </div>
+    const Wrapper = styled.div`
+      margin-top: 10em;
+      h1 {
+        position: fixed
+        color: darkslategrey;
+        font-size: 38px;
+        letter-spacing: 6px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    `
+    return (
+      <Wrapper>
+        <h1>{name}</h1>
+      </Wrapper>
     )
   }
 }
