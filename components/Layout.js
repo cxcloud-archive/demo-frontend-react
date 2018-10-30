@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 export default ({children}) => {
   const Wrapper = styled.div`
+    margin: 0 auto;
     font-family: Helvetica, Geneva, Tahoma, sans-serif;
     color: darkslategrey;
     `

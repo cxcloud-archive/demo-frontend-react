@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 export default () => {
   const Wrapper = styled.div`
-    width: 100%;
     color: darkslategrey;
     padding: 30px;
     display: flex;
