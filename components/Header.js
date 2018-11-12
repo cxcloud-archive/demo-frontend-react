@@ -1,46 +1,45 @@
-import React, { Component } from 'react'
-import Link from 'next/link'
-import Util from '../common/Util'
-import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar, faHandSpock, faShippingFast, faHeart, faAngleDown } from '@fortawesome/fontawesome-free-solid'
+import React, { Component } from 'react';
+import Link from 'next/link';
+import Util from '../common/Util';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar, faHandSpock, faShippingFast, faHeart, faAngleDown } from '@fortawesome/fontawesome-free-solid';
 
 export default class extends Component {
   render() {
     const Wrapper = styled.div`
-      margin: 20px;
+      margin: 1.25rem;
       flex-direction: row;
       list-style: none;
       display: flex;
       width: contain;
       justify-content: space-between;
       ul {
-        padding-right: 40px;
+        padding-right: 2.5rem;
         display: flex;
         li {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        font-size: 18px;
-        font-weight: 500;
-        margin: auto 20px auto 20px;
-        a {
           display: flex;
           flex-direction: row;
           align-items: center;
-          text-decoration: none;
-          color: darkslategrey;
+          font-size: 1.125rem;
+          font-weight: 500;
+          margin: auto 1.25rem;
+          a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-decoration: none;
+            color: #2f4f4f;
+          }
+          p {
+            margin-right: 0.625rem;
+          }
         }
-        p {
-          margin-right: 10px;
-        }
-      }
-    }
-    `
+      }`;
     const Logo = styled.img`
       display: flex;
       justify-content: flex-start;
-    `
+    `;
     return(
       <Wrapper>
         <Link href={{ pathname: '/' }}>

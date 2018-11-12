@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import Util from '../common/Util'
-import styled from 'styled-components'
-import Layout from '../components/Layout'
+import React, { Component } from 'react';
+import Util from '../common/Util';
+import styled from 'styled-components';
+import Layout from '../components/Layout';
 import _ from 'lodash';
 import './index';
-import ProductsCard from '../components/ProductsCard'
-import Title from '../components/Title'
+import ProductsCard from '../components/ProductsCard';
+import Title from '../components/Title';
 
 export default class extends Component {
   static async getInitialProps({ query, req }) {
@@ -20,12 +20,12 @@ export default class extends Component {
     const { productsList, categoryName } = this.props;
 
     const SelectedCategory = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100em;
-    justify-content: center;
-    margin: 0 auto;
-    `
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100em;
+      justify-content: center;
+      margin: 0 auto;
+    `;
     return (
       <Layout>
         <div>

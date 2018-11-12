@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export default ({children}) => {
   const Wrapper = styled.div`
     margin: 0 auto;
     font-family: Helvetica, Geneva, Tahoma, sans-serif;
-    color: darkslategrey;
-  `
+    color: #2f4f4f;
+  `;
   const button = styled.button`
     background-color: #f1ca5a;
-    padding: 8px 30px 8px 30px;
-    color: white;
+    padding: 0.5rem 1.87rem;
+    color: #fff;
     font-weight: 400;
-    font-size: 18px;
-    border-radius: 8px;
-    margin-top: 20px;
+    font-size: 1.12rem;
+    border-radius: 0.5rem;
+    margin-top: 1.25rem;
     border-color: transparent;
     a {
-      color: white;
+      color: #fff;
       text-decoration: none;
     }
-  `
+  `;
   return(
     <Wrapper>
         <Header global />

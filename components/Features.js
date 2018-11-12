@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar, faHandSpock, faShippingFast, faHeart } from '@fortawesome/fontawesome-free-solid'
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar, faHandSpock, faShippingFast, faHeart } from '@fortawesome/fontawesome-free-solid';
 
 export default class extends Component {
   render() {
@@ -13,38 +13,38 @@ export default class extends Component {
       flex-wrap: wrap;
       margin: 0 auto;
       h1 {
-        font-size: 20px;
-        color: darkslategrey;
+        font-size: 1.25rem;
+        color: #2f4f4f;
         text-transform: uppercase;
       }
       div {
         display: inline-flex;
-        margin-top: 20px;
-      `
+        margin-top: 1.25rem;
+      `;
     const Feature = styled.div`
       display: flex;
       flex-direction: column;
       width: 32em;
-      margin: 0 30px;
-      line-height: 28px;
-      color: darkslategrey;
+      margin: 0 1.875rem;
+      line-height: 1.75;
+      color: #2f4f4f;
         .icon {
-          margin: 10px auto 10px auto;
-          margin-bottom: 20px;
+          margin: 0.625rem auto;
+          margin-bottom: 1.25rem;
           justify-content: center;
         }
         h1 {
           margin: 0;
           text-align: center;
-          font-size: 16px;
+          font-size: 	1rem;
           font-weight: 600;
-          color: darkslategrey;
+          color: #2f4f4f;
         }
         .heart {
-          margin-top: 28px;
+          margin-top: 1.75rem;
           }
         }
-      `
+      `;
       return(
         <Wrapper>
           <h1>Amazing Features</h1>
