@@ -16,6 +16,8 @@ export default ({ id, name }) => {
     justify-content: center;
     cursor: pointer;
     background-color: #f5f5f5;
+    background-repeat: no-repeat;
+    background-size: cover;
     div {
       padding: 1.25rem;
       font-size: 1rem;
@@ -24,39 +26,27 @@ export default ({ id, name }) => {
     }
     :first-child {
       background-image: url(http://www.pngmart.com/files/3/Beautiful-Girl-Transparent-Background.png);
-      background-repeat: no-repeat;
       background-position-x: -2rem;
-      background-size: cover;
     }
     :nth-child(2) {
       background-image: url(http://www.pngmart.com/files/1/Women-Bag-Transparent-Background.png);
       background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
     }
     :nth-child(3) {
       background-image: url(http://www.pngmart.com/files/3/Branded-Watch-PNG-Pic.png);
-      background-repeat: no-repeat;
-      background-size: cover;
     }
     :nth-child(4) {
       background-image: url(http://www.pngmart.com/files/3/Sunglasses-PNG-Transparent-Image.png);
       background-position-y: 1.75rem;
       background-position-x: -0.5rem;
-      background-repeat: no-repeat;
-      background-size: cover;
     }
     :nth-child(5) {
       background-image: url(http://www.pngmart.com/files/7/Guy-Transparent-Images-PNG.png);
       background-position-y: 0.625rem;
       background-position-x: 3.875rem;
-      background-repeat: no-repeat;
-      background-size: cover;
     }
     :nth-child(6) {
       background-image: url(http://www.pngmart.com/files/5/Purse-PNG-File.png);
-      background-repeat: no-repeat;
-      background-size: cover;
     }
   }
   `;
