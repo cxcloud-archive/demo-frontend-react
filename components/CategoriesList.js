@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
 import CategoryCard from './CategoryCard';
-import Util from '../common/Util';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -31,38 +29,12 @@ const ListOfCategories = styled.div`
   }
 `;
 
-export default class extends Component {
-  state = {
-    categories: [],
-    productsList: []
-  };
-
-  async componentDidMount() {
-    const categories = await Util.fetchCategories();
-    const products = await Util.fetchProducts(categories[0].id);
-    this.setState({
-      categories,
-      productsList: products.results
-    });
-  }
-
-  onClickCategory = (e, categoryId) => {
-    e.preventDefault();
-    Util.fetchProducts(categoryId).then(list =>
-      this.setState({ productsList: list.results })
-    );
-  };
-
-  render() {
-    const { categories } = this.state;
-    return (
-      <Wrapper>
-        <ListOfCategories>
-          {categories.map((category, i) => (
-            <CategoryCard key={i} id={category.id} name={category.name.en} />
-          ))}
-        </ListOfCategories>
-      </Wrapper>
-    );
-  }
-}
+export default ({ categories = [] }) => (
+  <Wrapper>
+    <ListOfCategories>
+      {categories.map((category, i) => (
+        <CategoryCard key={i} id={category.id} name={category.name.en} />
+      ))}
+    </ListOfCategories>
+  </Wrapper>
+);
