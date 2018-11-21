@@ -1,5 +1,3 @@
-import 'isomorphic-fetch';
-
 export default class Util {
   static async fetchCategories() {
     const res = await fetch(`https://dev.cxcloud.com/api/v1/categories`);

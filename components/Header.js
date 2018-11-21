@@ -46,7 +46,7 @@ export default () => (
   <Wrapper>
     <Link href={{ pathname: '/' }}>
       <a>
-        <Logo src="../static/images/cx-cloud-logo.png" />
+        <Logo src="/static/images/cx-cloud-logo.png" />
       </a>
     </Link>
     <ul>
