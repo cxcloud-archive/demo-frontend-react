@@ -5,11 +5,10 @@ import { faAngleDown } from '@fortawesome/fontawesome-free-solid';
 
 const Wrapper = styled.div`
   margin: 1.25rem;
-  flex-direction: row;
-  list-style: none;
   display: flex;
-  width: contain;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
   ul {
     padding-right: 2.5rem;
@@ -28,7 +27,6 @@ const Wrapper = styled.div`
         flex-direction: row;
         align-items: center;
         text-decoration: none;
-        color: #2f4f4f;
       }
 
       p {
@@ -37,16 +35,12 @@ const Wrapper = styled.div`
     }
   }
 `;
-const Logo = styled.img`
-  display: flex;
-  justify-content: flex-start;
-`;
 
 export default () => (
   <Wrapper>
     <Link href={{ pathname: '/' }}>
       <a>
-        <Logo src="../static/images/cx-cloud-logo.png" />
+        <img src="../static/images/cx-cloud-logo.png" />
       </a>
     </Link>
     <ul>

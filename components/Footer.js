@@ -1,19 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
+import { Colors } from '../common/theme';
 
 const Wrapper = styled.div`
-  color: #2f4f4f;
   padding: 1.875rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   hr {
-    border-top: 0.125rem solid #f3f3f3;
+    border-top: 0.125rem solid ${Colors.concrete};
     border-left-color: transparent;
     height: 0.375rem;
     border-right-color: transparent;
-    border-bottom: 0.125rem solid #f3f3f3;
+    border-bottom: 0.125rem solid ${Colors.concrete};
     width: 74%;
   }
   div {
@@ -21,7 +21,6 @@ const Wrapper = styled.div`
     .copyright {
       font-size: 1.125rem;
       font-weight: 200;
-      color: #2f4f4f;
     }
     .copyright {
       margin-top: 3.125rem;
@@ -35,7 +34,6 @@ const Navbar = styled.div`
   text-align: center;
   a {
     font-weight: 500;
-    color: #2f4f4f;
     margin: auto 3.125rem 0.625rem 3.125rem;
     text-decoration: none;
   }

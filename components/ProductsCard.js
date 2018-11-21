@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import { Colors } from '../common/theme';
 
 const Wrapper = styled.div`
   display: flex;
@@ -12,12 +13,11 @@ const Wrapper = styled.div`
   margin: 1.25rem;
   width: 100%;
   font-weight: bold;
-  box-shadow: inset 0rem 0rem 0.81rem -0.31rem #2f4f4f;
+  box-shadow: inset 0rem 0rem 0.81rem -0.31rem ${Colors.darkSlateGray};
   border-radius: 0.18rem;
   a {
     width: 100%;
     text-decoration: none;
-    color: #2f4f4f;
     font-size: 0.87rem;
     font-weight: 500;
     text-transform: capitalize;
@@ -26,16 +26,14 @@ const Wrapper = styled.div`
       flex-direction: column;
     }
   }
-  a:hover {
-    color: #3a4048;
-  }
-  a:visited {
-    color: #2f4f4f;
-  }
 `;
 const Title = styled.h1`
   font-weight: bold;
   font-size: 1.25rem;
+
+  ${Wrapper}:hover & {
+    color: ${Colors.lightGray};
+  }
 `;
 const Price = styled.p`
   padding-top: 0.62rem;

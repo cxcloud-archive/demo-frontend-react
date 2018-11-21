@@ -1,10 +1,10 @@
 import CategoryCard from './CategoryCard';
 import styled from 'styled-components';
+import { Colors } from '../common/theme';
 
 const Wrapper = styled.div`
   margin: 1.875rem auto;
   padding: 1.25rem 2.5rem;
-  color: #2f4f4f;
   @media only screen and (max-width: 400px) {
     padding: 0 1.25rem;
   }
@@ -13,7 +13,7 @@ const ListOfCategories = styled.div`
   margin: 0 auto 2em auto;
   max-width: 100em;
   padding-bottom: 5em;
-  border-bottom: 0.12rem solid #f3f3f3;
+  border-bottom: 0.12rem solid ${Colors.concrete};
   display: flex;
   flex-direction: row;
   justify-content: center;

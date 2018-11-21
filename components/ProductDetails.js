@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/fontawesome-free-solid';
+import { Colors } from '../common/theme';
 
 const Wrapper = styled.div`
   margin: 10em auto auto auto;
@@ -8,7 +9,6 @@ const Wrapper = styled.div`
   justify-content: center;
   padding: 1.25rem 2.5rem;
   text-transform: capitalize;
-  color: #2f4f4f;
 `;
 const ProductContainer = styled.div`
   display: flex;
@@ -52,22 +52,22 @@ const Rating = styled.div`
   }
 `;
 const Cart = styled.div`
-    button {
-      padding: 0.93rem 1.25rem;
-      border-radius: 0.12rem;
-      background-color: #fff;
-      color: #d3b756
-      font-size: 1rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      box-shadow: inset 0rem 0rem 0.5rem -0.18rem #2f4f4f;
-      :hover {
-        border-color: transparent;
-        background-color: rgba(89, 85, 85, 0.1);
-        color: #2f4f4f;
-      }
+  button {
+    padding: 0.93rem 1.25rem;
+    border-radius: 0.12rem;
+    background-color: #fff;
+    color: ${Colors.mustard};
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: inset 0rem 0rem 0.5rem -0.18rem ${Colors.darkSlateGray};
+    :hover {
+      border-color: transparent;
+      background-color: rgba(89, 85, 85, 0.1);
+      color: inherit;
     }
-  `;
+  }
+`;
 
 export default ({ name, image, priceInEuro, sku, color, size }) => (
   <Wrapper>

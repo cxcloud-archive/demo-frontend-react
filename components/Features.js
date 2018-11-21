@@ -15,7 +15,6 @@ const Wrapper = styled.div`
   margin: 0 auto;
   h1 {
     font-size: 1.25rem;
-    color: #2f4f4f;
     text-transform: uppercase;
   }
   div {
@@ -29,7 +28,6 @@ const Feature = styled.div`
   width: 32em;
   margin: 0 1.875rem;
   line-height: 1.75;
-  color: #2f4f4f;
     .icon {
       margin: 0.625rem auto;
       margin-bottom: 1.25rem;
@@ -40,7 +38,6 @@ const Feature = styled.div`
       text-align: center;
       font-size: 	1rem;
       font-weight: 600;
-      color: #2f4f4f;
     }
     .heart {
       margin-top: 1.75rem;
