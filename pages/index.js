@@ -1,12 +1,11 @@
-import React from 'react';
+import { Component } from 'react';
 import CategoriesList from '../components/CategoriesList';
 import Util from '../common/Util';
 import Layout from '../components/Layout';
 import Features from '../components/Features';
 import Cover from '../components/Cover';
-import _ from 'lodash';
 
-export default class extends React.Component {
+export default class extends Component {
   static async getInitialProps({ query, req }) {
     const categories = await Util.fetchCategories();
     return { categories };
@@ -14,7 +13,7 @@ export default class extends React.Component {
   render() {
     const { categories } = this.props;
     return (
-      <Layout className="Homepage">
+      <Layout>
         <Cover />
         <CategoriesList categories={categories} />
         <Features />
