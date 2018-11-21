@@ -27,7 +27,6 @@ const Wrapper = styled.div`
         flex-direction: row;
         align-items: center;
         text-decoration: none;
-        color: #2f4f4f;
       }
 
       p {

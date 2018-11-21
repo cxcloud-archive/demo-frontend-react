@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   margin-top: 10em;
   h1 {
-    color: #2f4f4f;
     font-size: 38px;
     letter-spacing: 6px;
     font-weight: 400;

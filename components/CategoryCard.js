@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import styled from 'styled-components';
+import { Colors } from '../common/theme';
 
 const Wrapper = styled.div`
-  color: #2f4f4f;
   margin: 2.5rem 1.25rem auto 1.25rem;
   width: 14em;
   border-color: transparent;
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   cursor: pointer;
-  background-color: #f5f5f5;
+  background-color: ${Colors.whiteSmoke};
   background-repeat: no-repeat;
   background-size: cover;
   a {
