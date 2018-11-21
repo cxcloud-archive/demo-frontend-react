@@ -21,6 +21,7 @@ export default class extends Component {
     const productsList = await Util.fetchProducts(productId);
     const categoryName = _.get(query, 'name');
 
+    console.log('-->', query);
     return { productsList, categoryName };
   }
 
