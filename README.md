@@ -2,7 +2,7 @@
 
 React demo is part of CX Cloud, an open source accelerator for cloud native solutions. You can read more about CX Cloud [here](https://docs.cxcloud.com/).
 
-Demo Frontend is implemented using React framework [Next.js](https://github.com/zeit/next.js/) and demonstrates CX Cloud capabilities. Currently, the React frontend demonstrates capabilities of Commerce tools API as part of CX Cloud services. In upcoming plans, adding demonstration for various other APIs which are also part of CX Cloud services such as Contentful for managing content, Algolia for search and Authentication.
+Demo Frontend is implemented using React framework [Next.js](https://github.com/zeit/next.js/) and demonstrates CX Cloud capabilities. Currently, the React frontend demonstrates capabilities of Commerce tools API as part of CX Cloud services. In upcoming plans, adding demonstration for various other APIs which are also part of CX Cloud services such as Contentful for managing content, Algolia for search and AWS Cognito for authentication.
 
 ## Generate demo with CX Cloud CLI
 
