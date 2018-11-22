@@ -6,7 +6,7 @@ In order to explore/modify demo frontend locally, it is required to clone reposi
 $ git clone git@github.com:cxcloud/demo-frontend-react.git
 $ cd demo-frontend-react
 $ npm install
-$ npm run start
+$ npm run dev
 ```
 
 *TBA*
