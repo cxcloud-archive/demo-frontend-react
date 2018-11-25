@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Util from '../common/Util';
+import { Component } from 'react';
+import { fetchProducts } from '../common/Util';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import ProductsCard from '../components/ProductsCard';
@@ -22,7 +22,7 @@ const ProductsList = styled.div`
 export default class extends Component {
   static async getInitialProps({ query }) {
     const { id: productId, name: categoryName } = query;
-    const products = await Util.fetchProducts(productId);
+    const products = await fetchProducts(productId);
     return { products, categoryName };
   }
 

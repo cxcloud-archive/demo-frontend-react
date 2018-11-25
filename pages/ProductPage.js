@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Layout from '../components/Layout';
 import ProductDetails from '../components/ProductDetails';
-import Util from '../common/Util';
-import _ from 'lodash';
-import './index';
+import { fetchProductById } from '../common/Util';
 
 export default class extends Component {
-  static async getInitialProps({ query, req }) {
-    const productId = _.get(query, 'id');
-    const product = await Util.fetchProductById(productId);
-
+  static async getInitialProps({ query }) {
+    const { id: productId } = query;
+    const product = await fetchProductById(productId);
     return { product };
   }
   render() {
