@@ -6,41 +6,35 @@ const Wrapper = styled.div`
   padding: 1.875rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  hr {
-    border-top: 0.125rem solid ${Colors.concrete};
-    border-left-color: transparent;
-    height: 0.375rem;
-    border-right-color: transparent;
-    border-bottom: 0.125rem solid ${Colors.concrete};
-    width: 74%;
-  }
-  div {
-    width: 100%;
-    .copyright {
-      font-size: 1.125rem;
-      font-weight: 200;
-    }
-    .copyright {
-      margin-top: 3.125rem;
-      font-size: 0.75rem;
-      text-align: center;
-    }
-  }
+  align-items: center;
+`;
+const Separator = styled.hr`
+  width: 100%;
+  margin: 1rem 0;
+  border: 0;
+  border-top: 2px solid ${Colors.concrete};
 `;
 const Navbar = styled.div`
-  margin: 1.875rem auto 0 auto;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 20rem;
+  margin-bottom: 1.875rem;
+
   a {
-    font-weight: 500;
-    margin: auto 3.125rem 0.625rem 3.125rem;
-    text-decoration: none;
+    font-weight: 200;
+    color: ${Colors.silver};
+    font-size: 0.8rem;
   }
+`;
+const Copyright = styled.div`
+  font-size: 0.75rem;
+  font-weight: 200;
 `;
 
 export default () => (
   <Wrapper>
-    <hr />
+    <Separator />
     <Navbar>
       <Link href={{ pathname: '/About', query: { name: 'about' } }}>
         <a className="footer-link">About</a>
@@ -55,8 +49,6 @@ export default () => (
         <a className="footer-link">Store Locator</a>
       </Link>
     </Navbar>
-    <div>
-      <p className="copyright">&copy; 2018 Tieto</p>
-    </div>
+    <Copyright>&copy; 2018 Tieto</Copyright>
   </Wrapper>
 );
