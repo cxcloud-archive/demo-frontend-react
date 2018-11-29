@@ -1,55 +1,54 @@
-import React, { Component } from 'react';
-import Util from '../common/Util';
+import { Component } from 'react';
+import { fetchProducts } from '../common/Util';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
-import _ from 'lodash';
-import './index';
 import ProductsCard from '../components/ProductsCard';
-import Title from '../components/Title';
 
-const SelectedCategory = styled.div`
+const CategoryTitle = styled.h1`
+  margin-top: 10rem;
+  font-size: 2.3rem;
+  letter-spacing: 0.15em;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+`;
+
+const ProductsList = styled.div`
   display: flex;
   flex-wrap: wrap;
-  max-width: 100em;
   justify-content: center;
-  margin: 0 auto;
 `;
 
 export default class extends Component {
-  static async getInitialProps({ query, req }) {
-    const productId = _.get(query, 'id');
-    const productsList = await Util.fetchProducts(productId);
-    const categoryName = _.get(query, 'name');
-
-    return { productsList, categoryName };
+  static async getInitialProps({ query }) {
+    const { id: productId, name: categoryName } = query;
+    const products = await fetchProducts(productId);
+    return { products, categoryName };
   }
 
   render() {
-    const { productsList, categoryName } = this.props;
+    const { products, categoryName } = this.props;
 
     return (
       <Layout>
-        <div>
-          <Title name={categoryName} />
-          <SelectedCategory className="selected_category">
-            {productsList !== undefined &&
-            !(Object.keys(productsList).length === 0) ? (
-              productsList.results.map((item, i) => (
-                <ProductsCard
-                  key={i}
-                  id={item.id}
-                  name={item.name.en}
-                  image={item.masterVariant.images[0].url}
-                  description={item.slug.en}
-                  price={item.masterVariant.prices[0].value.centAmount}
-                  currency={item.masterVariant.prices[0].value.currencyCode}
-                />
-              ))
-            ) : (
-              <p>No Products To Show</p>
-            )}
-          </SelectedCategory>
-        </div>
+        <CategoryTitle>{categoryName}</CategoryTitle>
+        <ProductsList>
+          {products.length > 0 ? (
+            products.map((item, i) => (
+              <ProductsCard
+                key={i}
+                id={item.id}
+                name={item.name.en}
+                image={item.masterVariant.images[0].url}
+                description={item.slug.en}
+                price={item.masterVariant.prices[0].value.centAmount}
+                currency={item.masterVariant.prices[0].value.currencyCode}
+              />
+            ))
+          ) : (
+            <p>No Products To Show</p>
+          )}
+        </ProductsList>
       </Layout>
     );
   }

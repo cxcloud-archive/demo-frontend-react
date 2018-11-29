@@ -1,13 +1,13 @@
 import { Component } from 'react';
 import CategoriesList from '../components/CategoriesList';
-import Util from '../common/Util';
+import { fetchCategories } from '../common/Util';
 import Layout from '../components/Layout';
 import Features from '../components/Features';
 import Cover from '../components/Cover';
 
 export default class extends Component {
   static async getInitialProps({ query, req }) {
-    const categories = await Util.fetchCategories();
+    const categories = await fetchCategories();
     return { categories };
   }
   render() {
