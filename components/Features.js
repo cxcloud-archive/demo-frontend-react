@@ -10,53 +10,50 @@ const Wrapper = styled.div`
   display: flex;
   max-width: 82em;
   flex-direction: column;
-  text-align: center;
-  flex-wrap: wrap;
-  margin: 0 auto;
   h1 {
     font-size: 1.25rem;
     text-transform: uppercase;
+    text-align: center;
+    margin-top: 0;
   }
-  div {
-    display: inline-flex;
-    margin-top: 1.25rem;
-  `;
+`;
+
+const FeaturesList = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  grid-gap: 3rem;
+  margin-top: 2rem;
+`;
 
 const Feature = styled.div`
   display: flex;
   flex-direction: column;
-  width: 32em;
-  margin: 0 1.875rem;
+  align-items: center;
   line-height: 1.75;
-    .icon {
-      margin: 0.625rem auto;
-      margin-bottom: 1.25rem;
-      justify-content: center;
-    }
-    h1 {
-      margin: 0;
-      text-align: center;
-      font-size: 	1rem;
-      font-weight: 600;
-    }
-    .heart {
-      margin-top: 1.75rem;
-      }
-    }
-  `;
+  text-align: justify;
+  .icon {
+    margin-bottom: 1.25rem;
+  }
+  h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+`;
+
 export default () => (
   <Wrapper>
     <h1>Amazing Features</h1>
-    <div>
+    <FeaturesList>
       <Feature>
-        <div className="icon">
-          <FontAwesomeIcon
-            icon={faShippingFast}
-            size="4x"
-            color="rgba(47,79,79, 0.6)"
-          />
-        </div>
-        <h1>Free shipping</h1>
+        <span class="fas fa-shipping-fast" />
+        <FontAwesomeIcon
+          className="icon"
+          icon={faShippingFast}
+          size="4x"
+          color="rgba(47,79,79, 0.6)"
+        />
+        <h2>Free shipping</h2>
         <p>
           Get free shipping on all orders over €100! and free returns to our
           Finnish return centre! Items are dispatched from the US and will
@@ -64,14 +61,13 @@ export default () => (
         </p>
       </Feature>
       <Feature>
-        <div className="icon">
-          <FontAwesomeIcon
-            icon={faHandSpock}
-            size="4x"
-            color="rgba(47,79,79, 0.6)"
-          />
-        </div>
-        <h1>Amazing customer service</h1>
+        <FontAwesomeIcon
+          className="icon"
+          icon={faHandSpock}
+          size="4x"
+          color="rgba(47,79,79, 0.6)"
+        />
+        <h2>Amazing customer service</h2>
         <p>
           Get Free Shipping on all orders over €100 and and free returns to our
           Finnish return centre. Items are dispatched from the US and will
@@ -79,20 +75,19 @@ export default () => (
         </p>
       </Feature>
       <Feature>
-        <div className="icon">
-          <FontAwesomeIcon
-            icon={faHeart}
-            size="4x"
-            color="rgba(47,79,79, 0.6)"
-          />
-        </div>
-        <h1 className="heart">No custom or duty fees!</h1>
+        <FontAwesomeIcon
+          className="icon"
+          icon={faHeart}
+          size="4x"
+          color="rgba(47,79,79, 0.6)"
+        />
+        <h2>No custom or duty fees!</h2>
         <p>
           We pay these fees so you don't have to! The total billed at checkout
           is rthe final amount you pay, inclusive of VAT, with no additional
           charges at hte time of delivery!
         </p>
       </Feature>
-    </div>
+    </FeaturesList>
   </Wrapper>
 );
