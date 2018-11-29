@@ -26,6 +26,9 @@ export default class MyDocument extends Document {
             a {
               text-decoration: none;
             }
+            p {
+              font-weight: 300;
+            }
           `}</style>
           <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
