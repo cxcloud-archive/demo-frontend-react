@@ -1,18 +1,13 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 import { Colors } from '../common/theme';
+import Separator from '../components/Separator';
 
 const Wrapper = styled.div`
-  padding: 1.875rem;
+  padding-bottom: 1.875rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-const Separator = styled.hr`
-  width: 100%;
-  margin: 1rem 0;
-  border: 0;
-  border-top: 2px solid ${Colors.concrete};
 `;
 const Navbar = styled.div`
   display: flex;
