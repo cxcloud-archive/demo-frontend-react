@@ -2,15 +2,11 @@ import CategoryCard from './CategoryCard';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  max-width: 100em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  @media only screen and (max-width: 1600px) {
-    max-width: 65em;
-  }
+  width: 100%;
+  max-width: 45rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  grid-gap: 1.25rem;
 `;
 
 export default ({ categories = [] }) => (
