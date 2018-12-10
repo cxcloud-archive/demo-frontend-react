@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  @media only screen and (max-width: 480px) {
-    display: flex;
-    flex-direction: column;
-  }
   background-image: url('https://www.zastavki.com/pictures/originals/2013/Girls___Beautyful_Girls___Girl_on_white_background_041541_.jpg');
   background-repeat: no-repeat;
   background-size: cover;
