@@ -46,7 +46,7 @@ export default () => (
     <h1>Amazing Features</h1>
     <FeaturesList>
       <Feature>
-        <span class="fas fa-shipping-fast" />
+        <span className="fas fa-shipping-fast" />
         <FontAwesomeIcon
           className="icon"
           icon={faShippingFast}
