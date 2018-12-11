@@ -13,7 +13,7 @@ const Wrapper = styled.div`
     font-weight: bold;
   }
   img {
-    max-height: 0rem;
+    max-height: 30rem;
   }
   @media only screen and (max-width: 580px) {
     flex-direction: column;
