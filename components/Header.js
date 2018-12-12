@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Navigation from './Navigation';
 
 const Wrapper = styled.div`
-  margin: 1.25rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

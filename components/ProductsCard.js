@@ -17,6 +17,10 @@ const Wrapper = styled.div`
     width: 100%;
     text-transform: capitalize;
   }
+  &:hover {
+    background-color: ${Colors.mustard};
+    transition: background-color 200ms linear;
+  }
 `;
 const Description = styled.div`
   display: flex;
@@ -30,8 +34,9 @@ const Description = styled.div`
   }
 `;
 const Title = styled.h1`
-  font-weight: 400;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 1rem;
 
   ${Wrapper}:hover & {
     color: ${Colors.lightGray};

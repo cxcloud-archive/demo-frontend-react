@@ -29,7 +29,6 @@ const ProductInfo = styled.div`
     line-height: 1.62;
   }
   h1 {
-    font-weight: bold;
     font-size: 1.75rem;
     color: darkslategray;
   }
