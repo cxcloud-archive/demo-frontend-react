@@ -11,6 +11,10 @@ const Wrapper = styled.div`
   background-color: ${Colors.whiteSmoke};
   background-repeat: no-repeat;
   background-size: cover;
+  &:hover {
+    background-color: ${Colors.mustard};
+    transition: background-color 200ms linear;
+  }
   a {
     padding: 1.25rem;
     text-transform: uppercase;
