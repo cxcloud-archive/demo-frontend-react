@@ -15,9 +15,15 @@ export default class MyDocument extends Document {
             content="initial-scale=1.0, width=device-width"
           />
           <style global jsx>{`
+            @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700');
+            @media only screen and (max-width: 425px) {
+              html {
+                font-size: 0.8rem;
+              }
+            }
             body {
-              margin: 0;
-              font-family: Helvetica, Geneva, Tahoma, sans-serif;
+              font-family: 'Source Sans Pro', sans-serif;
+              font-weight: 400;
             }
             body,
             a {
@@ -26,8 +32,10 @@ export default class MyDocument extends Document {
             a {
               text-decoration: none;
             }
-            p {
-              font-weight: 300;
+            h1,
+            h2,
+            h3 {
+              font-weight: 600;
             }
           `}</style>
           <script
