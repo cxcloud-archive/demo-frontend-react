@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faBars } from '@fortawesome/fontawesome-free-solid';
+import { Device } from '../common/theme';
 
 const Wrapper = styled.div`
   margin-right: 1rem;
@@ -14,7 +15,7 @@ const Wrapper = styled.div`
     display: none;
   }
 
-  @media only screen and (max-width: 580px) {
+  @media ${Device.mobile} {
     .icon {
       display: block;
     }

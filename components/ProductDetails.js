@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/fontawesome-free-solid';
-import { Colors } from '../common/theme';
+import { Colors, Device } from '../common/theme';
 
 const Wrapper = styled.div`
   display: flex;
@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   img {
     max-height: 30rem;
   }
-  @media only screen and (max-width: 580px) {
+  @media ${Device.mobile} {
     flex-direction: column;
     img {
       max-height: 20rem;
@@ -30,7 +30,7 @@ const ProductInfo = styled.div`
   }
   h1 {
     font-size: 1.75rem;
-    color: darkslategray;
+    color: ${Colors.darkSlateGray};
   }
 `;
 const Rating = styled.p`
@@ -40,7 +40,7 @@ const Rating = styled.p`
     margin-left: 0.93rem;
     color: lightgray;
     :visited {
-      color: #000000;
+      color: ${Colors.white};
     }
   }
 `;
