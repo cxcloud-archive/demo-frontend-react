@@ -5,6 +5,7 @@ import {
   faShippingFast,
   faHeart
 } from '@fortawesome/fontawesome-free-solid';
+import { Colors } from '../common/theme';
 
 const Wrapper = styled.div`
   display: flex;
@@ -41,53 +42,43 @@ const Feature = styled.div`
   }
 `;
 
+const features = [
+  {
+    icon: faShippingFast,
+    title: 'Free Shipping',
+    text:
+      'Get free shipping on all orders over €100! and free returns to our Finnish return centre! Items are dispatched from the US and will arrive in 5-8 days.'
+  },
+  {
+    icon: faHandSpock,
+    title: 'Amazing customer service',
+    text:
+      'Get Free Shipping on all orders over €100 and and free returns to our Finnish return centre. Items are dispatched from the US and will arrive in 5-8 days.'
+  },
+  {
+    icon: faHeart,
+    title: 'No custom or duty fees!',
+    text:
+      "We pay these fees so you don't have to! The total billed at checkout is rthe final amount you pay, inclusive of VAT, with no additional charges at hte time of delivery!"
+  }
+];
+
 export default () => (
   <Wrapper>
     <h1>Amazing Features</h1>
     <FeaturesList>
-      <Feature>
-        <span className="fas fa-shipping-fast" />
-        <FontAwesomeIcon
-          className="icon"
-          icon={faShippingFast}
-          size="4x"
-          color="rgba(47,79,79, 0.6)"
-        />
-        <h2>Free shipping</h2>
-        <p>
-          Get free shipping on all orders over €100! and free returns to our
-          Finnish return centre! Items are dispatched from the US and will
-          arrive in 5-8 days.
-        </p>
-      </Feature>
-      <Feature>
-        <FontAwesomeIcon
-          className="icon"
-          icon={faHandSpock}
-          size="4x"
-          color="rgba(47,79,79, 0.6)"
-        />
-        <h2>Amazing customer service</h2>
-        <p>
-          Get Free Shipping on all orders over €100 and and free returns to our
-          Finnish return centre. Items are dispatched from the US and will
-          arrive in 5-8 days.
-        </p>
-      </Feature>
-      <Feature>
-        <FontAwesomeIcon
-          className="icon"
-          icon={faHeart}
-          size="4x"
-          color="rgba(47,79,79, 0.6)"
-        />
-        <h2>No custom or duty fees!</h2>
-        <p>
-          We pay these fees so you don't have to! The total billed at checkout
-          is rthe final amount you pay, inclusive of VAT, with no additional
-          charges at hte time of delivery!
-        </p>
-      </Feature>
+      {features.map((item, key) => (
+        <Feature key={key}>
+          <FontAwesomeIcon
+            className="icon"
+            icon={item.icon}
+            size="4x"
+            color={Colors.grannySmith}
+          />
+          <h2>{item.title}</h2>
+          <p>{item.text}</p>
+        </Feature>
+      ))}
     </FeaturesList>
   </Wrapper>
 );
