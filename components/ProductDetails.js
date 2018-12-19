@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 `;
 const ProductInfo = styled.div`
   max-width: 50em;
-  @media only screen and (max-width: 1100px) {
+  @media ${Device.tablet} {
     margin-left: 2.5rem;
     line-height: 1.62;
   }
@@ -38,7 +38,7 @@ const Rating = styled.p`
   align-items: center;
   a {
     margin-left: 0.93rem;
-    color: lightgray;
+    color: ${Colors.lightgray};
     :visited {
       color: ${Colors.white};
     }
