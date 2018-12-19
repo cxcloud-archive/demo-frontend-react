@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import { Colors } from '../common/theme';
 
 const Wrapper = styled.div`
-  margin: 2.5rem 1.25rem auto 1.25rem;
-  width: 14em;
-  border-color: transparent;
   height: 10em;
   align-items: center;
   display: flex;
@@ -14,12 +11,14 @@ const Wrapper = styled.div`
   background-color: ${Colors.whiteSmoke};
   background-repeat: no-repeat;
   background-size: cover;
+  &:hover {
+    background-color: ${Colors.mustard};
+    transition: background-color 200ms linear;
+  }
   a {
     padding: 1.25rem;
-    font-size: 1rem;
     text-transform: uppercase;
-    background-color: rgba(255,255,255, 0.9);
-    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.9);
     color: initial;
   }
   :first-child {
@@ -46,7 +45,6 @@ const Wrapper = styled.div`
   :nth-child(6) {
     background-image: url(http://www.pngmart.com/files/5/Purse-PNG-File.png);
   }
-}
 `;
 
 export default ({ id, name }) => (

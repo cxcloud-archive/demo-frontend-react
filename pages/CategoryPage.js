@@ -5,7 +5,6 @@ import Layout from '../components/Layout';
 import ProductsCard from '../components/ProductsCard';
 
 const CategoryTitle = styled.h1`
-  margin-top: 10rem;
   font-size: 2.3rem;
   letter-spacing: 0.15em;
   font-weight: 400;

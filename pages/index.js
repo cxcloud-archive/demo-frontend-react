@@ -4,6 +4,16 @@ import { fetchCategories } from '../common/Util';
 import Layout from '../components/Layout';
 import Features from '../components/Features';
 import Cover from '../components/Cover';
+import styled from 'styled-components';
+import Separator from '../components/Separator';
+
+const Wrapper = styled.div`
+  padding: 1.875rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem;
+  justify-items: center;
+`;
 
 export default class extends Component {
   static async getInitialProps({ query, req }) {
@@ -15,8 +25,11 @@ export default class extends Component {
     return (
       <Layout>
         <Cover />
-        <CategoriesList categories={categories} />
-        <Features />
+        <Wrapper>
+          <CategoriesList categories={categories} />
+          <Separator />
+          <Features />
+        </Wrapper>
       </Layout>
     );
   }

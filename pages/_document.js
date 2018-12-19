@@ -1,5 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document';
-import { Colors } from '../common/theme';
+import { Colors, Device } from '../common/theme';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -15,9 +15,15 @@ export default class MyDocument extends Document {
             content="initial-scale=1.0, width=device-width"
           />
           <style global jsx>{`
+            @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700');
+            @media ${Device.mobileS} {
+              html {
+                font-size: 0.8rem;
+              }
+            }
             body {
-              margin: 0;
-              font-family: Helvetica, Geneva, Tahoma, sans-serif;
+              font-family: 'Source Sans Pro', sans-serif;
+              font-weight: 400;
             }
             body,
             a {
@@ -26,11 +32,12 @@ export default class MyDocument extends Document {
             a {
               text-decoration: none;
             }
+            h1,
+            h2,
+            h3 {
+              font-weight: 600;
+            }
           `}</style>
-          <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
-            defer
-          />
         </Head>
         <body>
           <Main />
